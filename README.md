@@ -263,8 +263,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 [Contact]([email-ali]) | [GitHub]([github-ali-url]) | [Medium][medium-ali-url]
 
-[![portfolio-victoria-shield]][portfolio--url]
-[Contact][email-victoria] | [GitHub]([github-victoria-url]) | [Medium][medium-victoria-url]
+[![portfolio-victoria-shield]]([portfolio--url])
+[Contact]([email-victoria]) | [GitHub]([github-victoria-url]) | [Medium]([medium-victoria-url])
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
