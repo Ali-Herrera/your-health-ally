@@ -47,7 +47,7 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#built-with">Built With</a></li>
                 <li><a href="#branches">Branches</a></li>
-                <li><a href="#dev-reminders-&-issues">Dev Reminders</a></li>
+                <li><a href="#dev-notes">Dev Notes</a></li>
             </ul>
         </li>
         <li><a href="#getting-started">Getting Started</a>
@@ -162,9 +162,27 @@ _Note:_ `PostCSS` setup with [mantine-postcss-preset](https://mantine.dev/styles
 
 [![git-shield]]([git-url])
 
-### Dev Reminders
+### Dev Notes
 
-- **Mantine**'s `/hooks`, `/form` and `/core` components and their props, or any `React` hooks must be imported at the top of each file. Example below:
+**Clerkjs Set Up**
+
+1. Create an [account](https://clerk.com/docs/quickstarts/setup-clerk) with `Clerkjs`.
+2. Install `@clerk/nextjs` in the root folder.
+```
+npm install @clerk/nextjs
+```
+3. Set up your environment keys in `.env.local`  in the root folder.
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=​pk_test_example
+CLERK_SECRET_KEY=​sk_test_example
+```
+
+For more information, please refer to Clerk's [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs. 
+
+
+**Mantine Hooks** 
+
+1. All `/hooks`, `/form` and `/core` components and their props, or any `React` hooks must be imported at the top of each file. Example below:
 
   ```
     import { useState } from 'react';
@@ -173,7 +191,7 @@ _Note:_ `PostCSS` setup with [mantine-postcss-preset](https://mantine.dev/styles
     import { TextInput, NumberInput, Group, Text, ActionIcon } from '@mantine/core';
   ```
 
-- When importing an `ActionIcon` with ![Mantine], you must also import the graphic from Tabler (see below). You can search for icons at [https://tabler.io/icons](https://tabler.io/icons).
+2. When importing an `ActionIcon` with ![Mantine], you must also import the graphic from Tabler (see below). You can search for icons at [https://tabler.io/icons](https://tabler.io/icons).
 
   ```
   import { IconBrandLinkedin } from "@tabler/icons-react";
@@ -335,7 +353,7 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 [apollographql-shield]: https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql
 [apollographql-url]: https://www.apollographql.com/docs/
 [clerkjs-shield]: https://img.shields.io/badge/%20ClerkJS%20-6d50fb?style=for-the-badge
-[clerkjs-url]: https://clerk.com/docs/quickstarts/nextjs
+[clerkjs-url]: https://clerk.com/docs
 [chatgbt-shield]: https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white
 [chatgbt-url]: https://openai.com/blog/introducing-chatgpt-and-whisper-apis
 [eslint-shield]: https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white
