@@ -4,11 +4,11 @@
 
 
 <!-- PROJECT SHIELDS -->
-![https://flat.badgen.net/github/Contributors/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/Contributors/Ali-Herrera/your-health-ally)
+<!-- ![https://flat.badgen.net/github/Contributors/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/Contributors/Ali-Herrera/your-health-ally)
 ![https://flat.badgen.net/github/Stars/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/Stars/Ali-Herrera/your-health-ally)
 [![https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally)](https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE)
 ![https://flat.badgen.net/github/Open-issues/Ali-Herrera/your-health-ally)](https://flat.badgen.net/github/Open-issues/Ali-Herrera/your-health-ally)
-![https://flat.badgen.net/github/Open-prs/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/Open-prs/Ali-Herrera/your-health-ally)
+![https://flat.badgen.net/github/Open-prs/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/Open-prs/Ali-Herrera/your-health-ally) -->
 <!-- ![lastcommit](https://flat.badgen.net/github/Last-Commit/Ali-Herrera/your-health-ally) -->
 
 
@@ -158,7 +158,7 @@ _Note:_
 
 ### Dev Notes
 
-**Mantine Imports ** 
+**Mantine Imports** 
 
 1. All `/hooks`, `/form` and `/core` components and their props, or any `React` hooks must be imported at the top of each file. Example below:
 
@@ -208,8 +208,8 @@ _Note:_
 2. Once cloned, open the repo in your terminal.
 3. Download dependencies: `npm install` or `npm i`
 4. Set up your local `.gitignore` file in the root folder.
-> **a.** Create file: `touch .gitignore`
-> **b.** Make sure these are included in your file:
+**a.** Create file: `touch .gitignore`  
+**b.** Make sure these are included in your file:
 ```
 # macOS
 .DS_Store
@@ -234,16 +234,16 @@ jspm_packages/
 .env.production.local
 .env.local
 ```
-> **c.** Click through GitHub's `gitignore` templates for more. I suggest the `Node` template.
+**c.** Click through GitHub's `gitignore` templates for more. I suggest the `Node` template.  
 5. Set up `Clerkjs` for authentication.
-> **a.** Create an [account](https://clerk.com/docs/quickstarts/setup-clerk) with `Clerkjs`.
-> **b.** Install `@clerk/nextjs` in the root folder: `npm install @clerk/nextjs`
-> **c.** Set up your environment keys in `.env.local`  in the root folder:
-          ```
-          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=​pk_test_example
-          CLERK_SECRET_KEY=​sk_test_example
-          ```
-> **d.** For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs.
+**a.** Create an [account](https://clerk.com/docs/quickstarts/setup-clerk) with `Clerkjs`.  
+**b.** Install `@clerk/nextjs` in the root folder: `npm install @clerk/nextjs`  
+**c.** Set up your environment keys in `.env.local`  in the root folder:
+  ```
+  NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=​pk_test_example
+  CLERK_SECRET_KEY=​sk_test_example
+  ```
+**d.** For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs.  
 
 <p align="right">(<a href="#readme-top">🔝</a>)</p>
 
