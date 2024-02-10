@@ -139,9 +139,7 @@ _Note:_
 
 **APIs**
 
-[![ChatGBT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)
-- [`api`]()
-- [`api`]()
+[![ChatGBT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)  
 
 **Backing Services**
 
@@ -209,20 +207,43 @@ _Note:_
 1. Clone to your local computer.
 2. Once cloned, open the repo in your terminal.
 3. Download dependencies: `npm install` or `npm i`
-4. 
+4. Set up your local `.gitignore` file in the root folder.
+> **a.** Create file: `touch .gitignore`
+> **b.** Make sure these are included in your file:
+```
+# macOS
+.DS_Store
+
+# LinuxOS
+.*.swp
+
+# Windows
+*.pyc
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+```
+> **c.** Click through GitHub's `gitignore` templates for more. I suggest the `Node` template.
 5. Set up `Clerkjs` for authentication.
-
-  **a.** Create an [account](https://clerk.com/docs/quickstarts/setup-clerk) with `Clerkjs`.
-
-  **b.** Install `@clerk/nextjs` in the root folder: `npm install @clerk/nextjs`
-
-  **c.** Set up your environment keys in `.env.local`  in the root folder:
+> **a.** Create an [account](https://clerk.com/docs/quickstarts/setup-clerk) with `Clerkjs`.
+> **b.** Install `@clerk/nextjs` in the root folder: `npm install @clerk/nextjs`
+> **c.** Set up your environment keys in `.env.local`  in the root folder:
           ```
           NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=​pk_test_example
           CLERK_SECRET_KEY=​sk_test_example
           ```
-
-  **d.** For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs.
+> **d.** For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs.
 
 <p align="right">(<a href="#readme-top">🔝</a>)</p>
 
