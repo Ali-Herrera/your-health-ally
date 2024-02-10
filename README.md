@@ -323,7 +323,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 [Emojipedia](https://emojipedia.org/)  
 [Img Shields](https://shields.io)  
 [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)  
-
 [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)  
 
 <p align="right">(<a href="#readme-top">🔝</a>)</p>
