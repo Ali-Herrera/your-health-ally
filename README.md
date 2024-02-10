@@ -8,11 +8,12 @@
 ![forks]
 ![stars]
 ![issues]
-[license-shield]
-![commits]
-![lastcommit-shield]
+![license-shield]
 ![openprs]
 ![mergedprs]
+![commits]
+![lastcommit-shield]
+
 
 <!-- PROJECT LOGO -->
 <div align="center">
@@ -106,7 +107,7 @@ Additionally, the Journal of General Internal Medicine found that on average, pa
 ![average number of years to diagnosis for common chronic diseases](public/graphs/avgyearstodiagnosisBAR.png)
 [^2] [^3] [^7] [^7]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">🔝</a>)</p>
 
 ### Features
 - Responsive design
@@ -128,19 +129,11 @@ Created via [Mantine]([mantine-url]) `next-app-template` with [![next-shield]][n
 
 **Languages and Runtimes**
 
-[[!ts-shield]]([ts-url])
-[![js-shield]]([js-url])
-[![node-shield]]([node-url])
+[!ts-shield] [js-shield] ![node-shield]
 
 **Frameworks & Libraries**
 
-[![clerkjs-shield]]([clerkjs-url])
-[![eslint-shield]](eslint-url)
-[![jest-shield]](just-url)
-[![mantine-shield]]([mantine-url])
-[![npm-shield]]([npm-url])
-[![postcss-shield]]([postcss-url])
-[![storybook-shield]]([storybook-url])
+![clerkjs-shield] ![eslint-shield] ![jest-shield] ![mantine-shield] ![npm-shield] ![postcss-shield] ![storybook-shield]
 
 _Note:_ `PostCSS` setup with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
 
@@ -164,23 +157,7 @@ _Note:_ `PostCSS` setup with [mantine-postcss-preset](https://mantine.dev/styles
 
 ### Dev Notes
 
-**Clerkjs Set Up**
-
-1. Create an [account](https://clerk.com/docs/quickstarts/setup-clerk) with `Clerkjs`.
-2. Install `@clerk/nextjs` in the root folder.
-```
-npm install @clerk/nextjs
-```
-3. Set up your environment keys in `.env.local`  in the root folder.
-```
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=​pk_test_example
-CLERK_SECRET_KEY=​sk_test_example
-```
-
-For more information, please refer to Clerk's [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs. 
-
-
-**Mantine Hooks** 
+**Mantine Imports ** 
 
 1. All `/hooks`, `/form` and `/core` components and their props, or any `React` hooks must be imported at the top of each file. Example below:
 
@@ -191,39 +168,64 @@ For more information, please refer to Clerk's [Quickstart Guide](https://clerk.c
     import { TextInput, NumberInput, Group, Text, ActionIcon } from '@mantine/core';
   ```
 
-2. When importing an `ActionIcon` with ![Mantine], you must also import the graphic from Tabler (see below). You can search for icons at [https://tabler.io/icons](https://tabler.io/icons).
+2. Import `Tabler` icons with the `ActionIcon` icon component.
 
   ```
+  import { ActionIcon } from '@mantine/hooks';
   import { IconBrandLinkedin } from "@tabler/icons-react";
   ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">🔝</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
+<!-- PREREQUISITES -->
 ### Prerequisites
 
-1. [![node-shield]]([node-url])
+1. **Nodejs**
 
-- Run `node -v` command to see if you already have Node.js installed and to check your installed version.
+- Run `node -v` in the terminal to check if you already have `Node.js` installed.
+- If it's installed, it will show the installed version.
 - Follow Node.js [docs](https://nodejs.org/en/download/) to download.
 - Once downloaded, run `node -v` command to double check it's installed.
 
-2. [![npm-shield]]([npm-url])
+2. **NPM**
 
-- Run `npm -v` command to see if you already have `npm` installed and to check your installed version.
+- Run `npm -v` in the terminal to check if you already have `npm` installed.
+- If it's installed, it will show the installed version.
 - Follow npm [docs](https://docs.npmjs.com/about-npm) to create an account and to download.
 - Once downloaded, run `npm -v` command to double check it's installed.
     - [Differences Between Yarn and NPM](https://www.knowledgehut.com/blog/web-development/yarn-vs-npm#differences-between-yarn-and-npm%C2%A0)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- INSTALLATION -->
+### Installation
+
+1. Clone to your local computer.
+2. Once cloned, open the repo in your terminal.
+3. Download dependencies: `npm install` or `npm i`
+4. 
+5. Set up `Clerkjs` for authentication.
+
+  **a.** Create an [account](https://clerk.com/docs/quickstarts/setup-clerk) with `Clerkjs`.
+
+  **b.** Install `@clerk/nextjs` in the root folder: `npm install @clerk/nextjs`
+
+  **c.** Set up your environment keys in `.env.local`  in the root folder:
+          ```
+          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=​pk_test_example
+          CLERK_SECRET_KEY=​sk_test_example
+          ```
+
+  **d.** For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs.
+
+<p align="right">(<a href="#readme-top">🔝</a>)</p>
+
+
+
+<!-- SCRIPTS -->
 ## NPM Scripts
 
 ### Development
@@ -259,7 +261,7 @@ _Note:_
 - `storybook:build` – build production storybook bundle to `storybook-static`
 - `prettier:write` – formats all files with Prettier
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">🔝</a>)</p>
 
 
 
@@ -270,7 +272,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">🔝</a>)</p>
 
 
 
@@ -279,21 +281,23 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 [![portfolio-ali-shield]][portfolio-ali-url]
 
-[Contact]([email-ali]) | [GitHub]([github-ali-url]) | [Medium][medium-ali-url]
+[Contact]([email-ali]) | [GitHub]([github-ali-url]) | [Medium]([medium-ali-url])
+<br>
 
 [![portfolio-victoria-shield]]([portfolio--url])
+
 [Contact]([email-victoria]) | [GitHub]([github-victoria-url]) | [Medium]([medium-victoria-url])
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">🔝</a>)</p>
 
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more information.
+See [`LICENSE.txt`](license-url).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">🔝</a>)</p>
 
 
 
@@ -301,22 +305,34 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 ## Acknowledgements
 
 **Design Tools**
-- [`Canva`](https://canva.com)
-- [`design`]()
-- [``]()
+[`Canva`](https://canva.com)  
+[`Excalidraw`](https://excalidraw.com/)  
+[`Milanote`](https://www.milanote.com/refer/rcEpkqyVyNt7y3JS1C)
 
 **Project Management Tools**
-[`ClickUp`](https://clickup.com/?noRedirect=true&_gl=1*ndl932*_gcl_au*NjgwMjEzNTEwLjE3MDY5MDU0NTAuMTgyMjU5MDI2Ny4xNzA2OTA1NDY3LjE3MDY5MDU1MTE.)
-[`Milanote`](https://www.milanote.com/refer/rcEpkqyVyNt7y3JS1C)
-[`Slack`]()
-[``]()
+[`ClickUp`](https://clickup.com)  
+[`Slack`](https:/slack.com/)
 
-**Other**
-- [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md#roadmap)
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [Img Shields](https://shields.io)
+**Tutorials**
+[Best README](https://github.com/othneildrew/Best-README-Template/blob/master/README.md#roadmap)
+[Emojipedia](https://emojipedia.org/)  
+[Img Shields](https://shields.io)  
+[GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)  
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)  
+
+<p align="right">(<a href="#readme-top">🔝</a>)</p>
+
+<!-- CITATIONS -->
+[^1]: Harris poll: Many patients feel ignored or doubted when seeking medical treatment  . MITRE. (2022, December 20). https://www.mitre.org/news-insights/news-release/mitre-harris-poll-many-patients-feel-ignored-or-doubted#:~:text=MCLEAN%2C%20Va.%2C%20%26%20BEDFORD,believed%E2%80%9D%20when%20seeking%20medical%20treatment
+[^2]: Ibrahim, A. (2021, September 1). Signs of ms may start five years before diagnosis. MS International Federation. https://www.msif.org/news/2018/08/26/signs-of-ms-may-start-five-years-before-diagnosis/
+[^3]: Lupus facts and statistics. Lupus Foundation of America. (n.d.). https://www.lupus.org/resources/lupus-facts-and-statistics#:~:text=Lupus%20symptoms%20can%20also%20be,first%20notice%20their%20lupus%20symptoms.
+[^4]: Singh Ospina, N., Phillips, K.A., Rodriguez-Gutierrez, R. et al. Eliciting the Patient’s Agenda- Secondary Analysis of Recorded Clinical Encounters. J GEN INTERN MED 34, 36–40 (2019). https://doi.org/10.1007/s11606-018-4540-5
+[^5]: Ten early signs. Parkinson’s Foundation. (n.d.). https://www.parkinson.org/understanding-parkinsons/10-early-signs
+[^6]: Twenty things you might not know about celiac disease. Celiac Disease Foundation. (2022, August 24). https://celiac.org/about-the-foundation/featured-news/2016/08/20-things-you-might-not-know-about-celiac-disease/#:~:text=There%20is%20an%20average%20delay,miscarriage%2C%20epilepsy%2C%20and%20more.
+[^7]: Yale Medicine. (2024, January 19). Endometriosis. Yale Medicine. https://www.yalemedicine.org/conditions/endometriosis#:~:text=On%20average%2C%20women%20in%20the,are%20found%20to%20have%20it.
+
+<!-- <p align="right">(<a href="#readme-top">🔝</a>)</p> -->
 
 
 
@@ -390,14 +406,3 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 [ts-url]: https://www.typescriptlang.org/
 [vercel-shield]: https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white
 [vercel-url]: https://vercel.com/
-
-<!-- CITATIONS -->
-[^1]: Harris poll: Many patients feel ignored or doubted when seeking medical treatment  . MITRE. (2022, December 20). https://www.mitre.org/news-insights/news-release/mitre-harris-poll-many-patients-feel-ignored-or-doubted#:~:text=MCLEAN%2C%20Va.%2C%20%26%20BEDFORD,believed%E2%80%9D%20when%20seeking%20medical%20treatment
-[^2]: Ibrahim, A. (2021, September 1). Signs of ms may start five years before diagnosis. MS International Federation. https://www.msif.org/news/2018/08/26/signs-of-ms-may-start-five-years-before-diagnosis/
-[^3]: Lupus facts and statistics. Lupus Foundation of America. (n.d.). https://www.lupus.org/resources/lupus-facts-and-statistics#:~:text=Lupus%20symptoms%20can%20also%20be,first%20notice%20their%20lupus%20symptoms.
-[^4]: Singh Ospina, N., Phillips, K.A., Rodriguez-Gutierrez, R. et al. Eliciting the Patient’s Agenda- Secondary Analysis of Recorded Clinical Encounters. J GEN INTERN MED 34, 36–40 (2019). https://doi.org/10.1007/s11606-018-4540-5
-[^5]: Ten early signs. Parkinson’s Foundation. (n.d.). https://www.parkinson.org/understanding-parkinsons/10-early-signs
-[^6]: Twenty things you might not know about celiac disease. Celiac Disease Foundation. (2022, August 24). https://celiac.org/about-the-foundation/featured-news/2016/08/20-things-you-might-not-know-about-celiac-disease/#:~:text=There%20is%20an%20average%20delay,miscarriage%2C%20epilepsy%2C%20and%20more.
-[^7]: Yale Medicine. (2024, January 19). Endometriosis. Yale Medicine. https://www.yalemedicine.org/conditions/endometriosis#:~:text=On%20average%2C%20women%20in%20the,are%20found%20to%20have%20it.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
