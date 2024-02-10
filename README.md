@@ -2,31 +2,32 @@
 <a name="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
+![contributors]
+![forks]
+![stars]
+![issues]
+![license]
+![commits]
+![lastcommit-shield]
+![openprs]
+![mergedprs]
 
 <!-- PROJECT LOGO -->
 <div align="center">
-  <a href="">
-    <img src="public/logo/purple_wren_final_logo_empty_400px.png" alt="Purple Wren Digital Logo" width="300" height="106.5px">
+  <a href="https://example.com">
+    <img src="public/logo/logo-white-grayscale.png" alt="Your Health Ally Logo" width="80px" height="80px">
   </a>
 
 <h3 align="center">Your Health Ally</h3>
-<!-- TODO: Add links to wireframes -->
 <p align="center">
     Everyone deserves to be heard.
     <br />
     <br /> 
-    <a href="">View Wireframes</a>
+    <a href="">Give a Star</a>
     ·
-    <a href="https://github.com/Ali-Herrera/your-health-ally/issues">Report Bug</a>
+    <a href="https://github.com/Ali-Herrera/your-health-ally/issues">Report a Bug</a>
     ·
-    <a href="https://github.com/Ali-Herrera/your-health-ally/issues">Request Feature</a>
+    <a href="https://github.com/Ali-Herrera/your-health-ally/issues">Request a Feature</a>
   </p>
 </div>
 
@@ -53,16 +54,18 @@
     <li><a href="#npm-scripts">NPM Scripts</a>
         <ul>
         <li><a href="#development">Development</a></li>
-        <li><a href="#eslint">ESLint</a></li>
         <li><a href="#build"></a>Build</li>
         <li><a href="#start">Start</a></li>
+        <li><a href="#test">Test</a></li>
+        <li><a href="#eslint">ESLint</a></li>
+        <li><a href="#other-scripts">Other Scripts</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="">Citations</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#citations">Citations</a></li>
   </ol>
 </details>
 
@@ -71,7 +74,7 @@
 
 <p align="center">
     <!-- TODO: Replace link with deployed site -->
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">  New Site </a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Deployed App </a>
     🔭
     <a href="https://github.com/Ali-Herrera/your-health-ally"> GitHub Repository</a>
 </p>
@@ -102,15 +105,12 @@ Additionally, the Journal of General Internal Medicine found that on average, pa
 
 ### Features
 ***Your Health App**'s features will include:
-
 - Responsive design
 - Intuitive navigation
 - Authentication
 - AI Chat Bot
 - Interactive Glossary
 - Chat-to-PDF Conversion
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
@@ -148,7 +148,6 @@ To view all of Mantine's templates and installation guides, click [here](https:/
 **DevOps**
 [git-shield]
 
-
 ### Dev Reminders
 
 **Mantine**'s `/hooks`, `/form` and `/core` components and their props, or any `React` hooks must be imported at the top of each file. Example below:
@@ -168,19 +167,16 @@ When importing an `ActionIcon` with Mantine, you must also import the graphic fr
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-
 ## Getting Started
 
 ### Prerequisites
 
-1. ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-
+1. [![node-shield]][node-url]
 - Run `node -v` command to see if you already have Node.js installed and check the installed version.
 - [Follow Node.js docs to download.](https://nodejs.org/en/download/)
 - Once downloaded, run `node -v` command to double check its there.
 
-2. ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
-
+2. [![npm-shield]][npm-url]
 - Run `npm -v` command to see if you already have `npm` installed and check the installed version.
 - [Follow npm docs to create an account and to download.](https://docs.npmjs.com/about-npm)
 - Once downloaded, run `npm -v` command to double check its there.
@@ -195,10 +191,6 @@ When importing an `ActionIcon` with Mantine, you must also import the graphic fr
 
 - `npm run dev` to start the dev server at `http://localhost:3000/` during the app's development stage.
 
-### ESLint
-
-- `npm run lint` every time you want to run ESLint to catch errors. _Note: this runs the NEXTJS `next lint`command; [See Next.js docs for more.](https://nextjs.org/docs/app/api-reference/next-cli#lint)_
-
 ### Build
 
 - `npm run build` to generate an optimized version of the app for production. _Note: this runs the NEXTJS `next build` command; [See Next.js docs for more.](https://nextjs.org/docs/app/api-reference/next-cli#build)_
@@ -208,10 +200,7 @@ When importing an `ActionIcon` with Mantine, you must also import the graphic fr
 
 The app must be compiled with `npm run build` **before** you're able to run the command script `npm run start` to start the app in production mode. _Note: this runs the NEXTJS `next start` command.[See Next.js docs for more.](https://nextjs.org/docs/pages/building-your-application/deploying)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-### Testing scripts
+### Test
 
 - `npm run typecheck` – checks TypeScript types
 - `lint` – runs ESLint
@@ -220,11 +209,17 @@ The app must be compiled with `npm run build` **before** you're able to run the 
 - `jest:watch` – starts jest watch
 - `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
 
-### Other scripts
+### ESLint
+
+- `npm run lint` every time you want to run ESLint to catch errors. _Note: this runs the NEXTJS `next lint`command; [See Next.js docs for more.](https://nextjs.org/docs/app/api-reference/next-cli#lint)_
+
+### Other Scripts
 
 - `storybook` – starts storybook dev server
 - `storybook:build` – build production storybook bundle to `storybook-static`
 - `prettier:write` – formats all files with Prettier
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -238,17 +233,15 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- CONTRIBUTING -->
 ## Contributing
 
-| Contributor        | GitHub                                         | Portfolio                                             |
-| :----------------: | :--------------------------------------------- | :---------------------------------------------------- |
-| Ali Herrera        | [@Ali-Herrera](https://github.com/Ali-Herrera) | [alisonherrera.com](https://alisonherrera.com/)       |
-| Victoria McNorrill | [@victoriamcn](https://github.com/victoriamcn) | [victoriamcodes.com](https://www.victoriamcodes.com/) |
+[![portfolio-ali-shield]][portfolio-ali-url]
+| [Contact][email-ali] |  [GitHub][github-ali-url] [Medium][medium-ali-url] |
 
+[![portfolio-victoria-shield]][portfolio--url]
+| [Contact][email-victoria] | [GitHub][github-victoria-url] | [Medium][medium-victoria-url] |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- LICENSE -->
-
 ## License
 
 Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more information.
@@ -257,12 +250,6 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-
-**Supporting Services**
-[``]()
-[``]()
-[``]()
-
 
 **Design Tools**
 [``]()
@@ -305,34 +292,44 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-<!-- README MD REFERENCE -->
-[contributors-shield]: https://img.shields.io/github/contributors/github.com/Ali-Herrera/your-health-ally.svg?style=for-the-badge
-[contributors-url]: https://github.com/github.com/Ali-Herrera/your-health-ally/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github.com/Ali-Herrera/your-health-ally.svg?style=for-the-badge
-[forks-url]: https://github.com/github.com/Ali-Herrera/your-health-ally/network/members
-[stars-shield]: https://img.shields.io/github/stars/github.com/Ali-Herrera/your-health-ally.svg?style=for-the-badge
-[stars-url]: https://github.com/github.com/Ali-Herrera/your-health-ally/stargazers
-[issues-shield]: https://img.shields.io/github/issuesgithub.com/Ali-Herrera/your-health-ally.svg?style=for-the-badge
-[issues-url]: https://github.com/Ali-Herrera/your-health-ally/issues
-[license-shield]: https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge
+<!-- REPO MD REFERENCE -->
+<!-- https://flat.badgen.net/ -->
+<!-- Ali-Herrera/your-health-ally -->
+[branches]: https://flat.badgen.net/github/branches/Ali-Herrera/your-health-ally
+[commits]:  https://flat.badgen.net/github/commits/Ali-Herrera/your-health-ally
+[issues]: https://bflat.badgen.net/github/issues/Ali-Herrera/your-health-ally
+[openissues]: https://bflat.badgen.net/github/open-issues/Ali-Herrera/your-health-ally
+[contributors]: https://flat.badgen.net/github/contributors/Ali-Herrera/your-health-ally#1ecbe1
+[forks]: https://flat.badgen.net/github/forks/
+[lastcommit-shield]: https://flat.badgen.net/github/last-commit/Ali-Herrera/your-health-ally
+[mergedprs]: https://flat.badgen.net/github/merged-prs/Ali-Herrera/your-health-ally
+[openprs]: https://flat.badgen.net/github/open-prs/Ali-Herrera/your-health-ally
+[stars]: https://flat.badgen.net/github/stars/Ali-Herrera/your-health-ally
+
+<!-- MIT -->
+[license-shield]: https://flat.badgen.net/github//license/Ali-Herrera/your-health-ally
 [license-url]:https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE
 
-<!-- BRAND MD REFERENCE -->
-[logo]: images/logo/yourhealthallylogo.png
 
-<!-- SOCIAL MD REFERENCE -->
-[gmail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
-[medium-shield]: https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white
-[medium-ali-url]:
-[medium-victoria-url]:
-[portfolio-ali-shield]: https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white
-[portfolio-ali-url]: 
-[portfolio-victoria-shield]: [portfolio-ali-shield]: 
-[portfolio-victoria-url]: 
+<!-- IMAGES MD REFERENCE -->
+
+
+<!-- SOCIAL & CONTACT MD REFERENCE -->
+[gmail-ali]: alisonherrera02@gmail.com
+[gmail-victoria]: vmcnorrill@gmail.com
+[medium-ali-url]: https://medium.com/@alisonherrera02
+[medium-victoria-url]: https://medium.com/@vmcnorrill
+[portfolio-ali-shield]: https://img.shields.io/badge/Ali%20Herrera-f36b6d?style=for-the-badge
+[portfolio-ali-url]: https://alisonherrera.com/
+[portfolio-victoria-shield]: https://img.shields.io/badge/Victoria%20McNorrill-EE583F?style=for-the-badge
+[portfolio-victoria-url]: https://www.victoriamcodes.com/
+[github-ali-url]: https://github.com/Ali-Herrera
+[github-victoria-url]: https://github.com/victoriamcn
+
 
 <!-- STACK MD REFERENCE -->
-[-shield]:
-[-url]
+<!-- [-shield]:
+[-url] -->
 [apollographql-shield]: https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql
 [apollographql-url]: https://www.apollographql.com/docs/
 [chatgbt-shield]: https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white
@@ -342,14 +339,17 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 [git-shield]: https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white
 [git-url]: https://git-scm.com/doc
 [github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
-[github-url]:
+[github-url]: https://www.github.com/
 [js-shield]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
-[js-url]:
+[js-url]: https://www.javascript.com/
 [jest-shield]: https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white
 [jest-url]: https://jestjs.io/)
+[mantine-shield]: https://img.shields.io/badge/MantineUI-3a9ced?style=for-the-badge
 [mantine-url]: https://mantine.dev/
 [mongodb-shield]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
-[mongodb-url]:
+[mongodb-url]: https://www.mongodb.com/
+[mongoose-shield]: https://img.shields.io/badge/mongoosejs-87030a?style=for-the-badge
+[mongoose-url]: https://mongoosejs.com/docs/index.html
 [next-shield]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [next-url]: https://nextjs.org/
 [node-shield]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
@@ -361,10 +361,10 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 [postcss-shield]: https://img.shields.io/badge/postcss-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white
 [postcss-url]: https://postcss.org/
 [prettier-shield]: https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E
-[prettier-url]:
+[prettier-url]: https://prettier.io/
 [storybook-shield]: https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white
 [storybook-url]:https://storybook.js.org/
 [ts-shield]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
 [ts-url]: https://www.typescriptlang.org/
 [vercel-shield]: https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white
-[vercel-url]:
+[vercel-url]: https://vercel.com/
