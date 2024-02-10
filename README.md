@@ -1,6 +1,8 @@
 <!-- LINK TO TOP -->
 <a name="readme-top"></a>
 
+
+
 <!-- PROJECT SHIELDS -->
 ![contributors]
 ![forks]
@@ -33,6 +35,8 @@
   </p>
 </div>
 
+
+
 <!-- TABLE OF CONTENTS -->
 <details>
     <ol>
@@ -62,12 +66,13 @@
             </ul>
         </li>
         <li><a href="#usage">Usage</a></li>
-        <li><a href="#contributing">Contributing</a></li>
+        <li><a href="#contributors">Contributors</a></li>
         <li><a href="#license">License</a></li>
         <li><a href="#acknowledgments">Acknowledgments</a></li>
-        <li><a href="#citations">Citations</a></li>
   </ol>
 </details>
+
+
 
 <!-- About the Project -->
 ## About the Project
@@ -176,6 +181,8 @@ _Note:_ `PostCSS` setup with [mantine-postcss-preset](https://mantine.dev/styles
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -195,6 +202,8 @@ _Note:_ `PostCSS` setup with [mantine-postcss-preset](https://mantine.dev/styles
     - [Differences Between Yarn and NPM](https://www.knowledgehut.com/blog/web-development/yarn-vs-npm#differences-between-yarn-and-npm%C2%A0)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- INSTALLATION -->
 ## NPM Scripts
@@ -234,6 +243,8 @@ _Note:_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -243,8 +254,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
 <!-- CONTRIBUTING -->
-## Contributing
+## Contributors
 
 [![portfolio-ali-shield]][portfolio-ali-url]
 
@@ -255,6 +268,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
 <!-- LICENSE -->
 ## License
 
@@ -262,12 +277,14 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
 **Design Tools**
-- [``]()
-- [``]()
+- [`Canva`](https://canva.com)
+- [`design`]()
 - [``]()
 
 **Project Management Tools**
@@ -283,18 +300,6 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CITATIONS -->
-## Citations
-[^1]: Harris poll: Many patients feel ignored or doubted when seeking medical treatment  . MITRE. (2022, December 20). https://www.mitre.org/news-insights/news-release/mitre-harris-poll-many-patients-feel-ignored-or-doubted#:~:text=MCLEAN%2C%20Va.%2C%20%26%20BEDFORD,believed%E2%80%9D%20when%20seeking%20medical%20treatment
-[^2]: Ibrahim, A. (2021, September 1). Signs of ms may start five years before diagnosis. MS International Federation. https://www.msif.org/news/2018/08/26/signs-of-ms-may-start-five-years-before-diagnosis/
-[^3]: Lupus facts and statistics. Lupus Foundation of America. (n.d.). https://www.lupus.org/resources/lupus-facts-and-statistics#:~:text=Lupus%20symptoms%20can%20also%20be,first%20notice%20their%20lupus%20symptoms.
-[^4]: Singh Ospina, N., Phillips, K.A., Rodriguez-Gutierrez, R. et al. Eliciting the Patient’s Agenda- Secondary Analysis of Recorded Clinical Encounters. J GEN INTERN MED 34, 36–40 (2019). https://doi.org/10.1007/s11606-018-4540-5
-[^5]: Ten early signs. Parkinson’s Foundation. (n.d.). https://www.parkinson.org/understanding-parkinsons/10-early-signs
-[^6]: Twenty things you might not know about celiac disease. Celiac Disease Foundation. (2022, August 24). https://celiac.org/about-the-foundation/featured-news/2016/08/20-things-you-might-not-know-about-celiac-disease/#:~:text=There%20is%20an%20average%20delay,miscarriage%2C%20epilepsy%2C%20and%20more.
-[^7]: Yale Medicine. (2024, January 19). Endometriosis. Yale Medicine. https://www.yalemedicine.org/conditions/endometriosis#:~:text=On%20average%2C%20women%20in%20the,are%20found%20to%20have%20it.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -305,10 +310,6 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-
-<!-- REPO MD REFERENCE -->
-<!-- https://flat.badgen.net/ -->
-<!-- Ali-Herrera/your-health-ally -->
 [branches]: https://flat.badgen.net/github/branches/Ali-Herrera/your-health-ally
 [commits]:  https://flat.badgen.net/github/commits/Ali-Herrera/your-health-ally
 [issues]: https://bflat.badgen.net/github/issues/Ali-Herrera/your-health-ally
@@ -319,16 +320,8 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 [mergedprs]: https://flat.badgen.net/github/merged-prs/Ali-Herrera/your-health-ally
 [openprs]: https://flat.badgen.net/github/open-prs/Ali-Herrera/your-health-ally
 [stars]: https://flat.badgen.net/github/stars/Ali-Herrera/your-health-ally
-
-<!-- MIT -->
 [license-shield]: https://flat.badgen.net/github//license/Ali-Herrera/your-health-ally
 [license-url]:https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE
-
-
-<!-- IMAGES MD REFERENCE -->
-
-
-<!-- SOCIAL & CONTACT MD REFERENCE -->
 [gmail-ali]: alisonherrera02@gmail.com
 [gmail-victoria]: vmcnorrill@gmail.com
 [medium-ali-url]: https://medium.com/@alisonherrera02
@@ -339,11 +332,6 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 [portfolio-victoria-url]: https://www.victoriamcodes.com/
 [github-ali-url]: https://github.com/Ali-Herrera
 [github-victoria-url]: https://github.com/victoriamcn
-
-
-<!-- STACK MD REFERENCE -->
-<!-- [-shield]:
-[-url] -->
 [apollographql-shield]: https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql
 [apollographql-url]: https://www.apollographql.com/docs/
 [clerkjs-shield]: https://img.shields.io/badge/%20ClerkJS%20-6d50fb?style=for-the-badge
@@ -384,3 +372,14 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 [ts-url]: https://www.typescriptlang.org/
 [vercel-shield]: https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white
 [vercel-url]: https://vercel.com/
+
+<!-- CITATIONS -->
+[^1]: Harris poll: Many patients feel ignored or doubted when seeking medical treatment  . MITRE. (2022, December 20). https://www.mitre.org/news-insights/news-release/mitre-harris-poll-many-patients-feel-ignored-or-doubted#:~:text=MCLEAN%2C%20Va.%2C%20%26%20BEDFORD,believed%E2%80%9D%20when%20seeking%20medical%20treatment
+[^2]: Ibrahim, A. (2021, September 1). Signs of ms may start five years before diagnosis. MS International Federation. https://www.msif.org/news/2018/08/26/signs-of-ms-may-start-five-years-before-diagnosis/
+[^3]: Lupus facts and statistics. Lupus Foundation of America. (n.d.). https://www.lupus.org/resources/lupus-facts-and-statistics#:~:text=Lupus%20symptoms%20can%20also%20be,first%20notice%20their%20lupus%20symptoms.
+[^4]: Singh Ospina, N., Phillips, K.A., Rodriguez-Gutierrez, R. et al. Eliciting the Patient’s Agenda- Secondary Analysis of Recorded Clinical Encounters. J GEN INTERN MED 34, 36–40 (2019). https://doi.org/10.1007/s11606-018-4540-5
+[^5]: Ten early signs. Parkinson’s Foundation. (n.d.). https://www.parkinson.org/understanding-parkinsons/10-early-signs
+[^6]: Twenty things you might not know about celiac disease. Celiac Disease Foundation. (2022, August 24). https://celiac.org/about-the-foundation/featured-news/2016/08/20-things-you-might-not-know-about-celiac-disease/#:~:text=There%20is%20an%20average%20delay,miscarriage%2C%20epilepsy%2C%20and%20more.
+[^7]: Yale Medicine. (2024, January 19). Endometriosis. Yale Medicine. https://www.yalemedicine.org/conditions/endometriosis#:~:text=On%20average%2C%20women%20in%20the,are%20found%20to%20have%20it.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
