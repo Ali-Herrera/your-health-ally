@@ -4,12 +4,11 @@
 
 
 <!-- PROJECT SHIELDS -->
-![contributors](https://flat.badgen.net/github/Contributors/Ali-Herrera/your-health-ally)
-![stars](https://flat.badgen.net/github/Stars/Ali-Herrera/your-health-ally)
-[![license](https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally)](https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE)
-![openissues](https://flat.badgen.net/github/Open-issues/Ali-Herrera/your-health-ally)
-![openprs](https://flat.badgen.net/github/Open-prs/Ali-Herrera/your-health-ally)
-![mergedprs]
+![https://flat.badgen.net/github/Contributors/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/Contributors/Ali-Herrera/your-health-ally)
+![https://flat.badgen.net/github/Stars/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/Stars/Ali-Herrera/your-health-ally)
+[![https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally)](https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE)
+![https://flat.badgen.net/github/Open-issues/Ali-Herrera/your-health-ally)](https://flat.badgen.net/github/Open-issues/Ali-Herrera/your-health-ally)
+![https://flat.badgen.net/github/Open-prs/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/Open-prs/Ali-Herrera/your-health-ally)
 <!-- ![lastcommit](https://flat.badgen.net/github/Last-Commit/Ali-Herrera/your-health-ally) -->
 
 
@@ -151,7 +150,7 @@ _Note:_
 
 **Deployment Service**
 
-[![Vercel](https://img.shields.io/badge/vercel-%2523000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+[![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
 **DevOps**
 
@@ -300,7 +299,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- LICENSE -->
 ## License
 
-[![license](https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally)](https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE)
+[![https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally)](https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE)
 
 <p align="right">(<a href="#readme-top">🔝</a>)</p>
 
@@ -309,16 +308,16 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-**Design Tools**
-[`Canva`](https://canva.com)  
-[`Excalidraw`](https://excalidraw.com/)  
-[`Milanote`](https://www.milanote.com/refer/rcEpkqyVyNt7y3JS1C)
+**Design Tools**  
+`[Canva](https://canva.com)  
+[Excalidraw](https://excalidraw.com/)  
+[Milanote](https://www.milanote.com/refer/rcEpkqyVyNt7y3JS1C)
 
-**Project Management Tools**
-[`ClickUp`](https://clickup.com)  
-[`Slack`](https:/slack.com/)
+**Project Management Tools**  
+[ClickUp](https://clickup.com)  
+[Slack](https:/slack.com/)
 
-**Tutorials**
+**Tutorials**  
 [Best README](https://github.com/othneildrew/Best-README-Template/blob/master/README.md#roadmap)
 [Emojipedia](https://emojipedia.org/)  
 [Img Shields](https://shields.io)  
@@ -326,6 +325,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)  
 
 <p align="right">(<a href="#readme-top">🔝</a>)</p>
+
+
 
 <!-- CITATIONS -->
 [^1]: Harris poll: Many patients feel ignored or doubted when seeking medical treatment  . MITRE. (2022, December 20). https://www.mitre.org/news-insights/news-release/mitre-harris-poll-many-patients-feel-ignored-or-doubted#:~:text=MCLEAN%2C%20Va.%2C%20%26%20BEDFORD,believed%E2%80%9D%20when%20seeking%20medical%20treatment
@@ -335,5 +336,3 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 [^5]: Ten early signs. Parkinson’s Foundation. (n.d.). https://www.parkinson.org/understanding-parkinsons/10-early-signs
 [^6]: Twenty things you might not know about celiac disease. Celiac Disease Foundation. (2022, August 24). https://celiac.org/about-the-foundation/featured-news/2016/08/20-things-you-might-not-know-about-celiac-disease/#:~:text=There%20is%20an%20average%20delay,miscarriage%2C%20epilepsy%2C%20and%20more.
 [^7]: Yale Medicine. (2024, January 19). Endometriosis. Yale Medicine. https://www.yalemedicine.org/conditions/endometriosis#:~:text=On%20average%2C%20women%20in%20the,are%20found%20to%20have%20it.
-
-<p align="right">(<a href="#readme-top">🔝</a>)</p>
