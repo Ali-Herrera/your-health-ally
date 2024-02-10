@@ -6,7 +6,7 @@
 ![forks]
 ![stars]
 ![issues]
-![license]
+[license-shield]
 ![commits]
 ![lastcommit-shield]
 ![openprs]
@@ -22,8 +22,10 @@
 <p align="center">
     Everyone deserves to be heard.
     <br />
+    <a href="www.example.com"><strong>Explore the docs »</strong></a>
+    <br />
     <br /> 
-    <a href="">Give a Star</a>
+    <a href="">View Demo</a>
     ·
     <a href="https://github.com/Ali-Herrera/your-health-ally/issues">Report a Bug</a>
     ·
@@ -33,39 +35,37 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-<ol>
-    <li>
-    <a href="#about-the-project">About The Project</a>
-        <ul>
-            <li><a href="#description">Description</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#built-with">Built With</a></li>
-            <li><a href="#branches">Branches</a></li>
-            <li><a href="#dev-reminders-&-issues">Dev Reminders</a></li>
-        </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#npm-scripts">NPM Scripts</a>
-        <ul>
-        <li><a href="#development">Development</a></li>
-        <li><a href="#build"></a>Build</li>
-        <li><a href="#start">Start</a></li>
-        <li><a href="#test">Test</a></li>
-        <li><a href="#eslint">ESLint</a></li>
-        <li><a href="#other-scripts">Other Scripts</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-    <li><a href="#citations">Citations</a></li>
+    <ol>
+        <li>
+            <a href="#about-the-project">About The Project</a>
+            <ul>
+                <li><a href="#description">Description</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#built-with">Built With</a></li>
+                <li><a href="#branches">Branches</a></li>
+                <li><a href="#dev-reminders-&-issues">Dev Reminders</a></li>
+            </ul>
+        </li>
+        <li><a href="#getting-started">Getting Started</a>
+            <ul>
+                <li><a href="#prerequisites">Prerequisites</a></li>
+                <li><a href="#installation">Installation</a></li>
+            </ul>
+        </li>
+        <li><a href="#npm-scripts">NPM Scripts</a>
+            <ul>
+                <li><a href="#development">Development</a></li>
+                <li><a href="#build">Build</a></li>
+                <li><a href="#start">Start</a></li>
+                <li><a href="#test">Test</a></li>
+                <li><a href="#other-scripts">Other Scripts</a></li>
+            </ul>
+        </li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#contributing">Contributing</a></li>
+        <li><a href="#license">License</a></li>
+        <li><a href="#acknowledgments">Acknowledgments</a></li>
+        <li><a href="#citations">Citations</a></li>
   </ol>
 </details>
 
@@ -104,7 +104,6 @@ Additionally, the Journal of General Internal Medicine found that on average, pa
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Features
-***Your Health App**'s features will include:
 - Responsive design
 - Intuitive navigation
 - Authentication
@@ -118,39 +117,49 @@ Additionally, the Journal of General Internal Medicine found that on average, pa
 
 Created via [Mantine]([mantine-url]) `next-app-template` with [![next-shield]][next-url] `app router`.
 
-To view the `next-app-template` template, click [here](https://github.com/mantinedev/next-app-template).
+- To view the `next-app-template` template, click [here](https://github.com/mantinedev/next-app-template).
 
-To view all of Mantine's templates and installation guides, click [here](https://mantine.dev/getting-started/).
+- To view all of Mantine's templates and installation guides, click [here](https://mantine.dev/getting-started/).
 
 **Languages and Runtimes**
-[[!ts-shield]][ts-url]
-[![js-shield]][js-url]
-[![node-shield]][node-url]
+
+[[!ts-shield]]([ts-url])
+[![js-shield]]([js-url])
+[![node-shield]]([node-url])
 
 **Frameworks & Libraries**
-[![eslint-shield]](eslint-url)  setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
-[![jest-shield]](just-url) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-[![npm-shield]][npm-url]
-[![postcss-shield]][postcss-url] with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-[![storybook-shield]][storybook-url]
+
+[![clerkjs-shield]]([clerkjs-url])
+[![eslint-shield]](eslint-url)
+[![jest-shield]](just-url)
+[![mantine-shield]]([mantine-url])
+[![npm-shield]]([npm-url])
+[![postcss-shield]]([postcss-url])
+[![storybook-shield]]([storybook-url])
+
+_Note:_ `PostCSS` setup with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
 
 **APIs**
-[![chatgbt-shield]][chatgbt-url]
-[``]()
-[``]()
+
+[![chatgbt-shield]]([chatgbt-url])
+- [`api`]()
+- [`api`]()
 
 **Backing Services**
-[![mongodb-shield]][mongodb-url]
+
+[[![mongodb-shield]]]([mongodb-url])
 
 **Deployment Service**
-[vercel-shield]
+
+[![vercel-shield]]([vercel-url])
 
 **DevOps**
-[git-shield]
+
+[![git-shield]]([git-url])
 
 ### Dev Reminders
 
-**Mantine**'s `/hooks`, `/form` and `/core` components and their props, or any `React` hooks must be imported at the top of each file. Example below:
+- **Mantine**'s `/hooks`, `/form` and `/core` components and their props, or any `React` hooks must be imported at the top of each file. Example below:
 
   ```
     import { useState } from 'react';
@@ -159,11 +168,12 @@ To view all of Mantine's templates and installation guides, click [here](https:/
     import { TextInput, NumberInput, Group, Text, ActionIcon } from '@mantine/core';
   ```
 
-When importing an `ActionIcon` with Mantine, you must also import the graphic from Tabler (see below). You can search for icons at [https://tabler.io/icons](https://tabler.io/icons).
+- When importing an `ActionIcon` with ![Mantine], you must also import the graphic from Tabler (see below). You can search for icons at [https://tabler.io/icons](https://tabler.io/icons).
 
   ```
   import { IconBrandLinkedin } from "@tabler/icons-react";
   ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -171,16 +181,18 @@ When importing an `ActionIcon` with Mantine, you must also import the graphic fr
 
 ### Prerequisites
 
-1. [![node-shield]][node-url]
-- Run `node -v` command to see if you already have Node.js installed and check the installed version.
-- [Follow Node.js docs to download.](https://nodejs.org/en/download/)
-- Once downloaded, run `node -v` command to double check its there.
+1. [![node-shield]]([node-url])
 
-2. [![npm-shield]][npm-url]
-- Run `npm -v` command to see if you already have `npm` installed and check the installed version.
-- [Follow npm docs to create an account and to download.](https://docs.npmjs.com/about-npm)
-- Once downloaded, run `npm -v` command to double check its there.
-- [Differences Between Yarn and NPM](https://www.knowledgehut.com/blog/web-development/yarn-vs-npm#differences-between-yarn-and-npm%C2%A0)
+- Run `node -v` command to see if you already have Node.js installed and to check your installed version.
+- Follow Node.js [docs](https://nodejs.org/en/download/) to download.
+- Once downloaded, run `node -v` command to double check it's installed.
+
+2. [![npm-shield]]([npm-url])
+
+- Run `npm -v` command to see if you already have `npm` installed and to check your installed version.
+- Follow npm [docs](https://docs.npmjs.com/about-npm) to create an account and to download.
+- Once downloaded, run `npm -v` command to double check it's installed.
+    - [Differences Between Yarn and NPM](https://www.knowledgehut.com/blog/web-development/yarn-vs-npm#differences-between-yarn-and-npm%C2%A0)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,29 +201,30 @@ When importing an `ActionIcon` with Mantine, you must also import the graphic fr
 
 ### Development
 
-- `npm run dev` to start the dev server at `http://localhost:3000/` during the app's development stage.
+- `dev` starts the dev server at `http://localhost:3000/`
 
 ### Build
 
-- `npm run build` to generate an optimized version of the app for production. _Note: this runs the NEXTJS `next build` command; [See Next.js docs for more.](https://nextjs.org/docs/app/api-reference/next-cli#build)_
-- `npm run analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+- `build` - generates an optimized version of the app for production
+- `analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
 
 ### Start
 
-The app must be compiled with `npm run build` **before** you're able to run the command script `npm run start` to start the app in production mode. _Note: this runs the NEXTJS `next start` command.[See Next.js docs for more.](https://nextjs.org/docs/pages/building-your-application/deploying)_
+- `start` - starts the app while in production mode
+    - app must be compiled with `build` **before** `start`
 
 ### Test
 
-- `npm run typecheck` – checks TypeScript types
-- `lint` – runs ESLint
+- `typecheck` – checks TypeScript types
+- `lint` – runs ESLint to catch errors
 - `prettier:check` – checks files with Prettier
 - `jest` – runs jest tests
 - `jest:watch` – starts jest watch
 - `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
 
-### ESLint
-
-- `npm run lint` every time you want to run ESLint to catch errors. _Note: this runs the NEXTJS `next lint`command; [See Next.js docs for more.](https://nextjs.org/docs/app/api-reference/next-cli#lint)_
+_Note:_
+- `ESLint` setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
+- `Jest` setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 
 ### Other Scripts
 
@@ -234,10 +247,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Contributing
 
 [![portfolio-ali-shield]][portfolio-ali-url]
-| [Contact][email-ali] |  [GitHub][github-ali-url] [Medium][medium-ali-url] |
+
+[Contact]([email-ali]) | [GitHub]([github-ali-url]) | [Medium][medium-ali-url]
 
 [![portfolio-victoria-shield]][portfolio--url]
-| [Contact][email-victoria] | [GitHub][github-victoria-url] | [Medium][medium-victoria-url] |
+[Contact][email-victoria] | [GitHub]([github-victoria-url]) | [Medium][medium-victoria-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -252,9 +266,9 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 ## Acknowledgements
 
 **Design Tools**
-[``]()
-[``]()
-[``]()
+- [``]()
+- [``]()
+- [``]()
 
 **Project Management Tools**
 [`ClickUp`](https://clickup.com/?noRedirect=true&_gl=1*ndl932*_gcl_au*NjgwMjEzNTEwLjE3MDY5MDU0NTAuMTgyMjU5MDI2Ny4xNzA2OTA1NDY3LjE3MDY5MDU1MTE.)
@@ -299,8 +313,8 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 [commits]:  https://flat.badgen.net/github/commits/Ali-Herrera/your-health-ally
 [issues]: https://bflat.badgen.net/github/issues/Ali-Herrera/your-health-ally
 [openissues]: https://bflat.badgen.net/github/open-issues/Ali-Herrera/your-health-ally
-[contributors]: https://flat.badgen.net/github/contributors/Ali-Herrera/your-health-ally#1ecbe1
-[forks]: https://flat.badgen.net/github/forks/
+[contributors]: https://flat.badgen.net/github/contributors/Ali-Herrera/your-health-ally
+[forks]: https://flat.badgen.net/github/forks/Ali-Herrera/your-health-ally
 [lastcommit-shield]: https://flat.badgen.net/github/last-commit/Ali-Herrera/your-health-ally
 [mergedprs]: https://flat.badgen.net/github/merged-prs/Ali-Herrera/your-health-ally
 [openprs]: https://flat.badgen.net/github/open-prs/Ali-Herrera/your-health-ally
@@ -332,6 +346,8 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 [-url] -->
 [apollographql-shield]: https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql
 [apollographql-url]: https://www.apollographql.com/docs/
+[clerkjs-shield]: https://img.shields.io/badge/%20ClerkJS%20-6d50fb?style=for-the-badge
+[clerkjs-url]: https://clerk.com/docs/quickstarts/nextjs
 [chatgbt-shield]: https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white
 [chatgbt-url]: https://openai.com/blog/introducing-chatgpt-and-whisper-apis
 [eslint-shield]: https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white
@@ -344,11 +360,11 @@ Distributed under the MIT License. See [`LICENSE.txt`](license-url) for more inf
 [js-url]: https://www.javascript.com/
 [jest-shield]: https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white
 [jest-url]: https://jestjs.io/)
-[mantine-shield]: https://img.shields.io/badge/MantineUI-3a9ced?style=for-the-badge
+[mantine-shield]: https://img.shields.io/badge/%20MantineUI%20-3a9ced?style=for-the-badge
 [mantine-url]: https://mantine.dev/
 [mongodb-shield]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
 [mongodb-url]: https://www.mongodb.com/
-[mongoose-shield]: https://img.shields.io/badge/mongoosejs-87030a?style=for-the-badge
+[mongoose-shield]: https://img.shields.io/badge/%20mongoosejs%20-87030a?style=for-the-badge
 [mongoose-url]: https://mongoosejs.com/docs/index.html
 [next-shield]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [next-url]: https://nextjs.org/
