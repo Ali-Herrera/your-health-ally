@@ -304,11 +304,15 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Contributors
 
 ![AlisonHerrera](https://img.shields.io/badge/Ali%20Herrera-f36b6d?style=for-the-badge)  
-[Contact](alisonherrera02@gmail.com) | [Portfolio](https://alisonherrera.com/) | [GitHub](https://github.com/Ali-Herrera) | [Medium](https://medium.com/@alisonherrera02)
-<br>
+<a href="mailto:alisonherrera02@gmail.com"><strong>Contact Ali</strong></a>  
+
+[Portfolio](https://alisonherrera.com/) | [GitHub](https://github.com/Ali-Herrera) | [Medium](https://medium.com/@alisonherrera02)
+<br />
 
 ![VictoriaMcNorrill](https://img.shields.io/badge/Victoria%20McNorrill-EE583F?style=for-the-badge)  
-[Contact](vmcnorrill@gmail.com) | [Portfolio](https://www.victoriamcodes.com/) | [GitHub](https://github.com/victoriamcn) | [Medium](https://medium.com/@vmcnorrill)
+<a href="mailto:vmcnorrill@gmail.com"><strong>Contact Victoria</strong></a>  
+
+[Portfolio](https://www.victoriamcodes.com/) | [GitHub](https://github.com/victoriamcn) | [Medium](https://medium.com/@vmcnorrill)
 
 <p align="right">(<a href="#readme-top">🔝</a>)</p>
 
@@ -344,8 +348,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)  
 
 <p align="right">(<a href="#readme-top">🔝</a>)</p>
-
-
 
 <!-- CITATIONS -->
 [^1]: Harris poll: Many patients feel ignored or doubted when seeking medical treatment  . MITRE. (2022, December 20). https://www.mitre.org/news-insights/news-release/mitre-harris-poll-many-patients-feel-ignored-or-doubted#:~:text=MCLEAN%2C%20Va.%2C%20%26%20BEDFORD,believed%E2%80%9D%20when%20seeking%20medical%20treatment
