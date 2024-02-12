@@ -176,7 +176,7 @@ _Note:_
   import { IconBrandLinkedin } from "@tabler/icons-react";
   ```
 
-<p align="right">(<a href="#readme-top">🔝</a>)</p>
+<p align="right">(<a href="#readme-top"> 🔝 </a>)</p>
 
 
 
@@ -204,12 +204,17 @@ _Note:_
 <!-- INSTALLATION -->
 ### Installation
 
-**1.** Clone to your local computer.
-**2.** Once cloned, open the repo in your terminal.
-**3.** Download dependencies: `npm install` or `npm i`
-**4.** Set up your local `.gitignore` file in the root folder.
-  - **a.** Create file: `touch .gitignore`  
-  - **b.** Make sure these are included in your file:
+1. Clone repository to your local computer.
+
+2. Once cloned, open the repo in your terminal.
+
+3. Download dependencies: `npm install` or `npm i`.
+
+4. Set up your local `.gitignore` file in the root folder.
+  - Create file: `touch .gitignore`  
+  - Click through GitHub's `gitignore` templates. I suggest the `Node` template.  
+  - If anything, make sure these are included in your file:
+
 ```
 # macOS
 .DS_Store
@@ -234,18 +239,18 @@ jspm_packages/
 .env.production.local
 .env.local
 ```
-  - **c.** Click through GitHub's `gitignore` templates for more. I suggest the `Node` template.  
-**5.** Set up `Clerkjs` for authentication.
-  - **a.** Create an [account](https://clerk.com/docs/quickstarts/setup-clerk) with `Clerkjs`.  
-  - **b.** Install `@clerk/nextjs` in the root folder: `npm install @clerk/nextjs`  
-  - **c.** Set up your environment keys in `.env.local`  in the root folder:
+
+5. Set up `Clerkjs` for authentication.  
+  - Create an [account](https://clerk.com/docs/quickstarts/setup-clerk) with `Clerkjs`.  
+  - Install `@clerk/nextjs` in the root folder: `npm install @clerk/nextjs`  
+  - Set up your environment keys in `.env.local`  in the root folder:
   ```
   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=​pk_test_example
   CLERK_SECRET_KEY=​sk_test_example
   ```
-  - **d.** For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs.  
+  - For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs.  
 
-<p align="right">(<a href="#readme-top">🔝</a>)</p>
+<p align="right">(<a href="#readme-top"> 🔝 </a>)</p>
 
 
 
@@ -285,7 +290,7 @@ _Note:_
 - `storybook:build` – build production storybook bundle to `storybook-static`
 - `prettier:write` – formats all files with Prettier
 
-<p align="right">(<a href="#readme-top">🔝</a>)</p>
+<p align="right">(<a href="#readme-top"> 🔝 </a>)</p>
 
 
 
@@ -296,7 +301,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#readme-top">🔝</a>)</p>
+<p align="right">(<a href="#readme-top"> 🔝 </a>)</p>
 
 
 
@@ -314,7 +319,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 [Portfolio](https://www.victoriamcodes.com/) | [GitHub](https://github.com/victoriamcn) | [Medium](https://medium.com/@vmcnorrill)
 
-<p align="right">(<a href="#readme-top">🔝</a>)</p>
+<p align="right">(<a href="#readme-top"> 🔝 </a>)</p>
 
 
 
@@ -324,7 +329,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ![MITLicense](https://flat.badgen.net/static/license/MIT/yellow)  
 - <a href="https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE" target="_blank"> Read more. </a>
 
-<p align="right">(<a href="#readme-top">🔝</a>)</p>
+<p align="right">(<a href="#readme-top"> 🔝 </a>)</p>
 
 
 
@@ -347,7 +352,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)  
 [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)  
 
-<p align="right">(<a href="#readme-top">🔝</a>)</p>
+<p align="right">(<a href="#readme-top"> 🔝 </a>)</p>
 
 <!-- CITATIONS -->
 [^1]: Harris poll: Many patients feel ignored or doubted when seeking medical treatment  . MITRE. (2022, December 20). https://www.mitre.org/news-insights/news-release/mitre-harris-poll-many-patients-feel-ignored-or-doubted#:~:text=MCLEAN%2C%20Va.%2C%20%26%20BEDFORD,believed%E2%80%9D%20when%20seeking%20medical%20treatment
