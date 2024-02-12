@@ -1,8 +1,13 @@
-# macOS, LinuxOS
+# Got these from https://github.com/github/gitignore
+
+# macOS,
 .DS_Store
+
+# Linux
 .*.swp
 
-# Got these from https://github.com/github/gitignore
+# Windows
+*.pyc
 
 # Node.gitignore: https://github.com/github/gitignore/blob/main/Node.gitignore
 # For Node, JavaScript, TypeScript
