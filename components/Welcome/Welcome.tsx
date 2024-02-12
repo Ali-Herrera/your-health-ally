@@ -4,19 +4,22 @@ import classes from './Welcome.module.css';
 export function Welcome() {
   return (
     <>
-      <Title className={classes.title} ta="center" mt={100}>
-        Welcome to{' '}
+       <Title className={classes.title} ta="center" mt={100}>
+        Welcome to { '' }
         <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-          Mantine
+        Your Health Ally
         </Text>
       </Title>
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Next.js project includes a minimal setup for server side rendering, if you want
-        to learn more on Mantine + Next.js integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/next/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit page.tsx file.
+        Your Voice Matters, Your Health Matters. 
+
+        
+      </Text>
+      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
+      At Your Health Ally, we're here to empower you to take control of your health. Your concerns are <b>valid</b>, and your voice should be <b>heard</b>. 
+      </Text>
+      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
+      We provide the resources and support you need to navigate your health with confidence. 
       </Text>
     </>
   );
