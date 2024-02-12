@@ -317,7 +317,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- LICENSE -->
 ## License
 
-<a href="https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE" target="_blank">![MITLicense](https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally)</a>
+![MITLicense](https://flat.badgen.net/static/license/MIT/yellow)  
+- <a href="https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE" target="_blank"> Read more. </a>
 
 <p align="right">(<a href="#readme-top">🔝</a>)</p>
 
