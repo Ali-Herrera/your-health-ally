@@ -14,22 +14,28 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-  <a href="https://example.com">
+  <a href="https://example.com" target="_blank">
     <img src="public/logo/logo-white-grayscale.png" alt="Your Health Ally Logo" width="80px" height="80px">
   </a>
 
 <h3 align="center">Your Health Ally</h3>
+
 <p align="center">
     Everyone deserves to be heard.
     <br />
-    <a href="www.example.com"><strong>Explore the docs »</strong></a>
+    <br />
+      <!-- TODO: Replace link with deployed site -->
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"> Deployed App (TBD) </a>
+      🔭
+      <a href="https://github.com/Ali-Herrera/your-health-ally" target="_blank"> GitHub Repository</a>
     <br />
     <br /> 
-    <a href="">View Demo</a>
+    <!-- TODO: Make demo? -->
+    <a href="" target="_blank">View Demo</a>
     ·
-    <a href="https://github.com/Ali-Herrera/your-health-ally/issues">Report a Bug</a>
+    <a href="https://github.com/Ali-Herrera/your-health-ally/issues" target="_blank">Report a Bug</a>
     ·
-    <a href="https://github.com/Ali-Herrera/your-health-ally/issues">Request a Feature</a>
+    <a href="https://github.com/Ali-Herrera/your-health-ally/issues" target="_blank">Request a Feature</a>
   </p>
 </div>
 
@@ -75,14 +81,8 @@
 <!-- About the Project -->
 ## About the Project
 
-<p align="center">
-    <!-- TODO: Replace link with deployed site -->
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Deployed App </a>
-    🔭
-    <a href="https://github.com/Ali-Herrera/your-health-ally"> GitHub Repository</a>
-</p>
-
 ### Description
+
 **Your Health Ally** is an app designed to transform the way our users approach and manage their health by:
 - Empower users to advocate for their well-being 
 - Provide comprehensive information, resources, and tools, such as,
@@ -204,12 +204,12 @@ _Note:_
 <!-- INSTALLATION -->
 ### Installation
 
-1. Clone to your local computer.
-2. Once cloned, open the repo in your terminal.
-3. Download dependencies: `npm install` or `npm i`
-4. Set up your local `.gitignore` file in the root folder.
-**a.** Create file: `touch .gitignore`  
-**b.** Make sure these are included in your file:
+**1.** Clone to your local computer.
+**2.** Once cloned, open the repo in your terminal.
+**3.** Download dependencies: `npm install` or `npm i`
+**4.** Set up your local `.gitignore` file in the root folder.
+  - **a.** Create file: `touch .gitignore`  
+  - **b.** Make sure these are included in your file:
 ```
 # macOS
 .DS_Store
@@ -234,16 +234,16 @@ jspm_packages/
 .env.production.local
 .env.local
 ```
-**c.** Click through GitHub's `gitignore` templates for more. I suggest the `Node` template.  
-5. Set up `Clerkjs` for authentication.
-**a.** Create an [account](https://clerk.com/docs/quickstarts/setup-clerk) with `Clerkjs`.  
-**b.** Install `@clerk/nextjs` in the root folder: `npm install @clerk/nextjs`  
-**c.** Set up your environment keys in `.env.local`  in the root folder:
+  - **c.** Click through GitHub's `gitignore` templates for more. I suggest the `Node` template.  
+**5.** Set up `Clerkjs` for authentication.
+  - **a.** Create an [account](https://clerk.com/docs/quickstarts/setup-clerk) with `Clerkjs`.  
+  - **b.** Install `@clerk/nextjs` in the root folder: `npm install @clerk/nextjs`  
+  - **c.** Set up your environment keys in `.env.local`  in the root folder:
   ```
   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=​pk_test_example
   CLERK_SECRET_KEY=​sk_test_example
   ```
-**d.** For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs.  
+  - **d.** For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs.  
 
 <p align="right">(<a href="#readme-top">🔝</a>)</p>
 
@@ -303,14 +303,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- CONTRIBUTING -->
 ## Contributors
 
-![AlisonHerrera](https://img.shields.io/badge/Ali%20Herrera-f36b6d?style=for-the-badge)
-
+![AlisonHerrera](https://img.shields.io/badge/Ali%20Herrera-f36b6d?style=for-the-badge)  
 [Contact](alisonherrera02@gmail.com) | [Portfolio](https://alisonherrera.com/) | [GitHub](https://github.com/Ali-Herrera) | [Medium](https://medium.com/@alisonherrera02)
 <br>
 
-![VictoriaMcNorrill](https://img.shields.io/badge/Victoria%20McNorrill-EE583F?style=for-the-badge)
-
-
+![VictoriaMcNorrill](https://img.shields.io/badge/Victoria%20McNorrill-EE583F?style=for-the-badge)  
 [Contact](vmcnorrill@gmail.com) | [Portfolio](https://www.victoriamcodes.com/) | [GitHub](https://github.com/victoriamcn) | [Medium](https://medium.com/@vmcnorrill)
 
 <p align="right">(<a href="#readme-top">🔝</a>)</p>
@@ -320,7 +317,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- LICENSE -->
 ## License
 
-[![https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally](https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally)](https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE)
+<a href="https://github.com/Ali-Herrera/your-health-ally/blob/main/LICENCE" target="_blank">![MITLicense](https://flat.badgen.net/github/License/Ali-Herrera/your-health-ally)</a>
 
 <p align="right">(<a href="#readme-top">🔝</a>)</p>
 
@@ -330,7 +327,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Acknowledgements
 
 **Design Tools**  
-`[Canva](https://canva.com)  
+[Canva](https://canva.com)  
 [Excalidraw](https://excalidraw.com/)  
 [Milanote](https://www.milanote.com/refer/rcEpkqyVyNt7y3JS1C)
 
