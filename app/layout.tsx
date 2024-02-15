@@ -6,8 +6,8 @@ import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'Your Health Ally',
+  description: 'Your Health Ally is a platform that helps you manage your health and wellness by providing tools for self advocacy.',
 };
 
 export default function RootLayout({ 
