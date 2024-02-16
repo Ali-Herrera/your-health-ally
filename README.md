@@ -15,7 +15,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://example.com" target="_blank">
-    <img src="public/logo/logo-white-grayscale.png" alt="Your Health Ally Logo" width="80px" height="80px">
+    <img src="public/icons/heart-pink-medium.png" alt="Your Health Ally Logo" width="80px" height="80px">
   </a>
 
 <h3 align="center">Your Health Ally</h3>
