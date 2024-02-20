@@ -8,7 +8,7 @@ import { theme } from '../theme';
 export const metadata = {
   title: 'Your Health Ally',
   description:
-    'Your Health Ally is here to empower you to take control of your health. Your concerns are valid, and your voice should be heard. We provide the resources and support you need to navigate your health with confidence.',
+    'Your Health Ally is here to empower you to take control of your health. Your concerns are valid, and your voice should be heard. We provide the resources and support you need to navigate your health with confidence.'
 };
 
 export default function RootLayout({

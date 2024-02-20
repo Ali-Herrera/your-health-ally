@@ -269,13 +269,11 @@ orleans.codegen.cs
 #bower_components/
 
 # VS Code files for those working on multiple tools
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
 *.code-workspace
-
 
 # Backup & report files from converting an old project file
 # to a newer Visual Studio version. Backup files are not needed,

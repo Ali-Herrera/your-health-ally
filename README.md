@@ -15,7 +15,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://example.com" target="_blank">
-    <img src="public/logo/logo-white-grayscale.png" alt="Your Health Ally Logo" width="80px" height="80px">
+    <img src="public/icons/heart-pink-medium.png" alt="Your Health Ally Logo" width="80px" height="80px">
   </a>
 
 <h3 align="center">Your Health Ally</h3>
@@ -134,8 +134,9 @@ Additionally, the Journal of General Internal Medicine found that on average, pa
 [![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://storybook.js.org/)
 
 _Note:_
-- Repo set up with [`Mantine Next App`](https://github.com/mantinedev/next-app-template) template for `app router`.
+- Repo set up with [`Mantine Next App`](https://github.com/mantinedev/next-app-template) template for `app router`
 - `PostCSS` setup with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
+- [Prettier vs Lint](https://prettier.io/docs/en/comparison)
 
 **APIs**
 
