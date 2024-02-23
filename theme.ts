@@ -1,7 +1,10 @@
+// to override the default Mantine theme in /app
+
 'use client';
 
 import { createTheme } from '@mantine/core';
 
+
 export const theme = createTheme({
-  /* Put your mantine theme override here */
+ // create your theme here
 });

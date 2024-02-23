@@ -1,6 +1,4 @@
-import { MantineThemeOverride } from "@mantine/core";
-
-// This file is used to override the default Mantine theme.
+// to override the default Mantine theme in /components
 
 // To view Mantine default theme.colors: https://mantine.dev/colors-generator/
 
@@ -9,9 +7,10 @@ import { MantineThemeOverride } from "@mantine/core";
 // 2. Set saturation shift to 0% and drag darken/lighten % slider all the way to the right.
 // 3. Slowly drag darken/lighten slider to the left until desired primary shade is the 7th item.
 // 4. Copy and paste the color array into this theme object and delete any items past 9.
-
-export const theme: MantineThemeOverride = {
-	colors: {
+      
+  export const theme = {
+      // theme.colors
+      colors: {
 		darkPink: [
 			"#EECDDE", // 0 = Lightest
 			"#DF9DBE",
@@ -88,6 +87,7 @@ export const theme: MantineThemeOverride = {
             "#A53A46",
           ],
 	},
+    // theme.black, theme.white, theme.primaryColor, theme.primaryShade
 	black: "#1A1910",
 	white: "#F9F9F9",
 
@@ -95,6 +95,7 @@ export const theme: MantineThemeOverride = {
 	primaryShade: 8,
 
     // Added components for examples as we build the app
+        // ?? dot notation needed for components ??
 	components: {
 		Avatar: {
 			defaultProps: {
@@ -136,4 +137,4 @@ export const theme: MantineThemeOverride = {
 			}),
 		},
 	},
-};
+}    
