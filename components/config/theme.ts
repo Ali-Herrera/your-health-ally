@@ -8,13 +8,38 @@ import { MantineThemeOverride } from "@mantine/core"
 
 export const theme: MantineThemeOverride = {
     colors: {
+        pink: [
+            "#EF96C3", // 0 = Lightest
+            "#E265A5",
+            "#DB5197",
+            "#D4408B",
+            "#CC3180",
+            "#B83075", // 5 = Light Logo Color
+            "#9E2B65", // 6 = Medium Logo Color
+            "#92255C", 
+            "#872657", // 8 = Dark Logo Color
+            "#7D214F", 
+            "#731C48",
+        ],
+        green: [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+        ],
 
     },
-    black: "#1A1A1A",
-    white: "#EDEDED",
+    black: "#1A1910",
+    white: "#F9F9F9",
 
-    primaryColor: "",
-    primaryShade: ,
+    primaryColor: "pink",
+    primaryShade: 8,
 
     components: {
         Avatar: {
