@@ -1,4 +1,4 @@
-import { ClerkProvider } from '@clerk/nextjs'
+import { ClerkProvider } from '@clerk/nextjs';
 
 import '@mantine/core/styles.css';
 import React from 'react';
@@ -7,14 +7,15 @@ import { theme } from '../theme';
 
 export const metadata = {
   title: 'Your Health Ally',
-  description: 'Your Health Ally is a platform that helps you manage your health and wellness by providing tools for self advocacy.',
+  description:
+    'Your Health Ally is here to empower you to take control of your health. Your concerns are valid, and your voice should be heard. We provide the resources and support you need to navigate your health with confidence.'
 };
 
-export default function RootLayout({ 
+export default function RootLayout({
   children,
-  }: { 
-      children: React.ReactNode
-  }) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <ClerkProvider>
       <html lang="en">
