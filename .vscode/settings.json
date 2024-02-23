@@ -1,7 +1,10 @@
 {
-    "git.ignoreLimitWarning": true,
-    "cSpell.words": [
-        "apollographql",
-        "Wireframes"
-    ]
+	"git.ignoreLimitWarning": true,
+	"cSpell.words": [
+		"apollographql",
+		"stylelint",
+		"tabler",
+		"typecheck",
+		"Wireframes"
+	]
 }
