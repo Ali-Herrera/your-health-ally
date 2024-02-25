@@ -131,7 +131,6 @@ Additionally, the Journal of General Internal Medicine found that on average, pa
 [![PostCSS](https://img.shields.io/badge/postcss-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)](https://postcss.org/)
 [![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)](https://prettier.io/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://storybook.js.org/)
 
 _Note:_
 - Repo set up with [`Mantine Next App`](https://github.com/mantinedev/next-app-template) template for `app router`
@@ -287,8 +286,6 @@ _Note:_
 
 ### Other Scripts
 
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
 - `prettier:write` – formats all files with Prettier
 
 <p align="right">(<a href="#readme-top"> 🔝 </a>)</p>
