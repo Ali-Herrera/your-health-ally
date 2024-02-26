@@ -248,7 +248,17 @@ jspm_packages/
   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=​pk_test_example
   CLERK_SECRET_KEY=​sk_test_example
   ```
-  - For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs.  
+  - For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs. 
+
+6. Install Prisma: Run `npm install prisma --save-dev`
+
+7. Configure MongoDB connection:  
+ - In your `.env` file, set up MongoDB connection string from MongoDB Atlas
+ - This establishes a connection with MongoDB cluster (DATABASE_URL). 
+
+8. View Tables (collections) in Prisma Studio:  
+  - **After** installing Prisma and configuring MongoDB connection string, you can use Prisma Studio to view the collections.
+  - Run `npx prisma studio` 
 
 <p align="right">(<a href="#readme-top"> 🔝 </a>)</p>
 
