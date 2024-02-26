@@ -201,6 +201,14 @@ _Note:_
 - Once downloaded, run `npm -v` command to double check it's installed.
     - [Differences Between Yarn and NPM](https://www.knowledgehut.com/blog/web-development/yarn-vs-npm#differences-between-yarn-and-npm%C2%A0)
 
+3. **MongoDB**
+
+- Access to a `MongoDB 4.2+ server` with a replica set deployment.
+  - `Prisma` recommends using `MongoDB Atlas`.
+- The `MongoDB` database connector uses transactions to support nested writes.
+  - Transactions require a replica set deployment.
+  - The easiest way to deploy a replica set is with Atlas. It's free to get started.
+
 <!-- INSTALLATION -->
 ### Installation
 
