@@ -125,11 +125,11 @@ Additionally, the Journal of General Internal Medicine found that on average, pa
 [![ESLint](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org/docs/latest/)
 [![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
 [![Mantine](https://img.shields.io/badge/%20Mantine%20-3a9ced?style=for-the-badge)](https://mantine.dev/)
-[![Mongoose](https://img.shields.io/badge/%20mongoosejs%20-87030a?style=for-the-badge)](https://mongoosejs.com/docs/index.html)
 [![Nextjs](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 [![PostCSS](https://img.shields.io/badge/postcss-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)](https://postcss.org/)
 [![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)](https://prettier.io/)
+[![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)](https://www.prisma.io/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 
 _Note:_
@@ -141,10 +141,10 @@ _Note:_
 
 [![ChatGBT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)  
 
+
 **Backing Services**
 
 [![MongoDB](https://img.shields.io/badge/MongoDB-%25234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
-[![ApolloGraphQL](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)](https://www.apollographql.com/docs/)
 
 **Deployment Service**
 
@@ -201,6 +201,14 @@ _Note:_
 - Once downloaded, run `npm -v` command to double check it's installed.
     - [Differences Between Yarn and NPM](https://www.knowledgehut.com/blog/web-development/yarn-vs-npm#differences-between-yarn-and-npm%C2%A0)
 
+3. **MongoDB**
+
+- Access to a `MongoDB 4.2+ server` with a replica set deployment.
+  - `Prisma` recommends using `MongoDB Atlas`.
+- The `MongoDB` database connector uses transactions to support nested writes.
+  - Transactions require a replica set deployment.
+  - The easiest way to deploy a replica set is with Atlas. It's free to get started.
+
 <!-- INSTALLATION -->
 ### Installation
 
@@ -248,7 +256,17 @@ jspm_packages/
   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=​pk_test_example
   CLERK_SECRET_KEY=​sk_test_example
   ```
-  - For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs.  
+  - For more information, refer to the Clerkjs [Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) with Nextjs. 
+
+6. Install Prisma: Run `npm install prisma --save-dev`
+
+7. Configure MongoDB connection:  
+ - In your `.env` file, set up MongoDB connection string from MongoDB Atlas
+ - This establishes a connection with MongoDB cluster (DATABASE_URL). 
+
+8. View Tables (collections) in Prisma Studio:  
+  - **After** installing Prisma and configuring MongoDB connection string, you can use Prisma Studio to view the collections.
+  - Run `npx prisma studio` 
 
 <p align="right">(<a href="#readme-top"> 🔝 </a>)</p>
 
