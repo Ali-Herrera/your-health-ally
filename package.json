@@ -19,8 +19,9 @@
   "dependencies": {
     "@clerk/nextjs": "^4.29.7",
     "@mantine/core": "7.5.3",
-    "@mantine/hooks": "7.5.3",
+    "@mantine/hooks": "^7.5.3",
     "@next/bundle-analyzer": "^14.0.1",
+    "@prisma/client": "^5.10.2",
     "@tabler/icons-react": "^2.40.0",
     "next": "14.1.0",
     "react": "18.2.0",
@@ -56,6 +57,7 @@
     "postcss-preset-mantine": "1.13.0",
     "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.2.5",
+    "prisma": "^5.10.2",
     "stylelint": "^15.11.0",
     "stylelint-config-standard-scss": "^11.1.0",
     "ts-jest": "^29.1.1",
