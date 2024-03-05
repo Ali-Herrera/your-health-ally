@@ -1,23 +1,24 @@
-import { SignIn } from "@clerk/nextjs";
-import { Box } from "@mantine/core";
-import { Metadata } from "next";
+import { SignIn } from '@clerk/nextjs';
+import { Box } from '@mantine/core';
+import { Metadata } from 'next';
+import { redirect } from 'next/navigation'; // Import redirect from next/navigation
 
 export const metadata: Metadata = {
-  title: "Your Health Ally - Sign In",
+  title: 'Your Health Ally - Sign In',
 };
 
 export default function SignInPage() {
   return (
     <Box
       style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
       }}
     >
       <div>
-        <SignIn appearance={{ variables: { colorPrimary: "#036c5f" } }} />
+        <SignIn appearance={{ variables: { colorPrimary: '#036c5f' } }} />
       </div>
     </Box>
   );
