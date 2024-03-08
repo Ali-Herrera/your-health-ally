@@ -1,5 +1,7 @@
 // to override the default Mantine theme in /components
 
+import { MantineThemeOverride } from "@mantine/core";
+
 // To view Mantine default theme.colors: https://mantine.dev/colors-generator/
 
 // To generate a color array:
@@ -8,7 +10,7 @@
 // 3. Slowly drag darken/lighten slider to the left until desired primary shade is the 7th item.
 // 4. Copy and paste the color array into this theme object and delete any items past 9.
 
-export const theme = {
+export const theme: MantineThemeOverride = {
   // theme.colors
   colors: {
     darkPink: [
@@ -108,31 +110,14 @@ export const theme = {
     },
     Button: {
       defaultProps: {
-        loaderPosition: 'right',
+        loaderPosition: 'center',
         radius: 'md',
-        variant: 'filled',
-        color: 'primaryColor',
       },
       //@ts-ignore
-      styles: (theme, params) => ({
-        root: {
-          fontStretch: '100%',
-          ':hover': {
-            backgroundColor:
-              params.variant === 'filled' ? theme.colors.pink[8] : undefined,
-            color:
-              params.variant === 'filled' ? theme.colors.pink[0] : undefined,
-          },
-          ':active': {
-            backgroundColor:
-              params.variant === 'filled' ? theme.colors.pink[8] : undefined,
-            color:
-              params.variant === 'filled' ? theme.colors.pink[0] : undefined,
-          },
+      styles: () => ({
           ':disabled': {
             filter: 'grayscale(100%)',
           },
-        },
       }),
     },
   },

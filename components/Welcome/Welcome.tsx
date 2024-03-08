@@ -8,13 +8,15 @@ import {
   Text,
   Group,
 } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+// import { useMediaQuery } from '@mantine/hooks';
 import { theme } from "../config/theme";
 // import WelcomeImg from '../../public/images/unsplashphoto-welcome.jpg';
 // image org size = 6000x4000
 
 export function Welcome() {
   // const mobileScreen = useMediaQuery('(max-width: 482px)');
+
+  // Deconstruct theme object
   const { colors, white } = theme;
 
   return (
@@ -24,11 +26,7 @@ export function Welcome() {
         // radius='sm'
         style={{ height: "100%", width: "100%" }}
       >
-        <Overlay
-          gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
-          opacity={1}
-          zIndex={0}
-        />
+        <Overlay color="#1A1910" opacity={1} zIndex={0} />
         <Box
           p="calc(var(--mantine-spacing-xl) * 6)"
           ta="start"
