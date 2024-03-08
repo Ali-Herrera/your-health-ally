@@ -1,6 +1,12 @@
 'use client';
 
-import { UserButton, useUser } from '@clerk/nextjs';
+import {
+  UserButton,
+  useUser,
+  SignedIn,
+  SignedOut,
+  SignInButton,
+} from '@clerk/nextjs';
 import { Group } from '@mantine/core';
 import { Welcome } from '../components/Welcome/Welcome';
 import { Chat } from './Chat';
@@ -20,6 +26,7 @@ export default function HomePage() {
           </Group>
         </>
       )}{' '}
+      {/* If the user is not signed in, show the welcome page */}
       {isLoaded && user && (
         <>
           <Chat />
