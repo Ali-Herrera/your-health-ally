@@ -83,7 +83,7 @@ export function Welcome() {
             </Link>
           </Box>
           <Box pos="fixed" style={{ bottom: "20px" }}>
-            <Text c={black} fs="italic" fw={500} style={{ fontSize: "0.8rem" }}>
+            <Text c={black} fs="italic" fw={500} style={{ fontSize: "10px" }}>
               © Your Health Ally. This is not medical advice. This is for
               educational purposes only. Please see your healthcare provider for
               medical treatment.

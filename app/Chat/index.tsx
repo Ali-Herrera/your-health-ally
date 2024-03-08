@@ -1,8 +1,11 @@
+import Image from "next/image";
 import {
   Button,
+  Box,
   Group,
   Stack,
   Text,
+  Title,
   AppShell,
   Burger,
   Textarea,
@@ -11,10 +14,13 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { UserButton, SignedIn } from "@clerk/nextjs";
 import { theme } from "../../components/config/theme";
+import LogoHeart from "../../public/icons/heart-pink-dark.png";
 
 export function Chat() {
   const [opened, { toggle }] = useDisclosure();
-  const { colors, white } = theme;
+
+  // Deconstruct theme object
+  const { colors, white, black } = theme;
 
   return (
     <div style={{ overflowX: "hidden" }}>
@@ -28,22 +34,31 @@ export function Chat() {
           }}
           padding="md"
         >
-          <AppShell.Header>
+          <AppShell.Header bg={white} withBorder={false}>
             <Burger
               opened={opened}
               onClick={toggle}
               hiddenFrom="sm"
               size="sm"
             />
-            <div>Logo</div>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
+            <Group style={{ alignContent: "center", justifyContent: "center" }}>
+              <Image
+                src={LogoHeart}
+                alt="Your Health Ally Logo"
+                width={40}
+                height={40}
+              />
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+            </Group>
           </AppShell.Header>
 
-          <AppShell.Navbar p="md" bg={theme.colors.teal[7]}>
-            <Text>Your Health Ally</Text>
-            <Button color={theme.colors.pink[6]}>+ New Chat</Button>
+          <AppShell.Navbar p="md" bg={colors?.darkPink?.[6]} withBorder={false}>
+            <Title c={white}>Your Health Ally</Title>
+            <Button variant="white" color={colors?.darkPink?.[6]}>
+              + New Chat
+            </Button>
           </AppShell.Navbar>
 
           <AppShell.Main
@@ -59,7 +74,7 @@ export function Chat() {
             <Stack className="chatLog" gap="md" style={{ padding: "20px" }}>
               <Group
                 className="chatUser"
-                bg={colors?.teal?.[2]}
+                // bg={colors?.teal?.[2]}
                 style={{
                   padding: "10px",
                 }}
@@ -69,7 +84,7 @@ export function Chat() {
               </Group>
               <Group
                 className="chatGPT"
-                bg={colors?.teal?.[5]}
+                // bg={colors?.teal?.[5]}
                 style={{
                   padding: "10px",
                 }}
@@ -82,24 +97,27 @@ export function Chat() {
             <Group
               style={{
                 display: "flex",
-                alignItems: "flex-end",
+                alignItems: "center",
                 padding: "20px",
               }}
             >
               <Textarea
                 placeholder="What questions do you have?"
-                style={{
-                  flex: 1,
-                  marginRight: "20px",
-                  borderRadius: "20px",
-                  boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
-                }}
+                style={
+                  {
+                    // flex: 1,
+                    // marginRight: "20px",
+                    // borderRadius: "20px",
+                    // boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
+                  }
+                }
               />
               <Button
-                variant="filled"
-                color={colors?.pink?.[6]}
+                // variant="filled"
+                color={colors?.teal?.[6]}
+                size="lg"
+                radius="md"
                 style={{
-                  borderRadius: 10,
                   padding: "10px 20px",
                   height: "fit-content",
                 }}
@@ -108,18 +126,20 @@ export function Chat() {
               </Button>
             </Group>
           </AppShell.Main>
-          <AppShell.Footer
-            style={{
-              textAlign: "center",
-              padding: "20px",
-              marginTop: "auto", // Pushes the footer to the bottom of the container
-            }}
-          >
-            <Text style={{ fontSize: "0.8rem", textAlign: "right" }}>
-              © Your Health Ally. This is not medical advice. This is for
-              educational purposes only. Please see your healthcare provider for
-              medical treatment.
-            </Text>
+          <AppShell.Footer bg={white} withBorder={false}>
+            <Box
+              m="lg"
+              style={{
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+            >
+              <Text c={black} fs="italic" fw={500} style={{ fontSize: "10px" }}>
+                © Your Health Ally. This is not medical advice. This is for
+                educational purposes only. Please see your healthcare provider
+                for medical treatment.
+              </Text>
+            </Box>
           </AppShell.Footer>
         </AppShell>
       </div>
