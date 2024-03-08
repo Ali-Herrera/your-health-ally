@@ -2,12 +2,10 @@ import {
   Button,
   Group,
   Stack,
-  Title,
   Text,
   AppShell,
   Burger,
   Textarea,
-  Center,
   Avatar,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
@@ -16,6 +14,7 @@ import { theme } from "../../components/config/theme";
 
 export function Chat() {
   const [opened, { toggle }] = useDisclosure();
+  const { colors, white } = theme;
 
   return (
     <div style={{ overflowX: "hidden" }}>
@@ -48,7 +47,7 @@ export function Chat() {
           </AppShell.Navbar>
 
           <AppShell.Main
-            bg={theme.colors.teal[1]}
+            bg={white}
             style={{
               overflowX: "hidden",
               paddingBottom: "70px",
@@ -60,7 +59,7 @@ export function Chat() {
             <Stack className="chatLog" gap="md" style={{ padding: "20px" }}>
               <Group
                 className="chatUser"
-                bg={theme.colors.teal[2]}
+                bg={colors?.teal?.[2]}
                 style={{
                   padding: "10px",
                 }}
@@ -70,7 +69,7 @@ export function Chat() {
               </Group>
               <Group
                 className="chatGPT"
-                bg={theme.colors.teal[5]}
+                bg={colors?.teal?.[5]}
                 style={{
                   padding: "10px",
                 }}
@@ -98,7 +97,7 @@ export function Chat() {
               />
               <Button
                 variant="filled"
-                color={theme.colors.pink[6]}
+                color={colors?.pink?.[6]}
                 style={{
                   borderRadius: 10,
                   padding: "10px 20px",
@@ -110,7 +109,6 @@ export function Chat() {
             </Group>
           </AppShell.Main>
           <AppShell.Footer
-            bg={theme.colors.teal[7]}
             style={{
               textAlign: "center",
               padding: "20px",
