@@ -1,7 +1,7 @@
 import { SignIn } from '@clerk/nextjs';
 import { Box } from '@mantine/core';
 import { Metadata } from 'next';
-import { redirect } from 'next/navigation'; // Import redirect from next/navigation
+import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'Your Health Ally - Sign In',
