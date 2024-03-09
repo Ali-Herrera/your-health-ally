@@ -83,10 +83,12 @@ export function Welcome() {
             </Link>
           </Box>
           <Box pos="fixed" style={{ bottom: "20px" }}>
-            <Text c={black} fs="italic" fw={500} style={{ fontSize: "10px" }}>
-              © Your Health Ally. This is not medical advice. This is for
-              educational purposes only. Please see your healthcare provider for
-              medical treatment.
+            <Text c={black} m="xs" style={{ fontSize: "10px" }}>
+              © YOUR HEALTH ALLY {new Date().getFullYear()}
+            </Text>
+            <Text c={black} fs="italic" m="xs" style={{ fontSize: "10px" }}>
+              This is not medical advice. This is for educational purposes only.
+              Please see your healthcare provider for medical treatment.
             </Text>
           </Box>
         </Box>

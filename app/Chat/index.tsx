@@ -33,6 +33,7 @@ export function Chat() {
             collapsed: { mobile: !opened },
           }}
           padding="md"
+          layout="alt"
         >
           <AppShell.Header bg={white} withBorder={false}>
             <Burger
@@ -126,20 +127,23 @@ export function Chat() {
               </Button>
             </Group>
           </AppShell.Main>
-          <AppShell.Footer bg={white} withBorder={false}>
-            <Box
-              m="lg"
-              style={{
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            >
-              <Text c={black} fs="italic" fw={500} style={{ fontSize: "10px" }}>
-                © Your Health Ally. This is not medical advice. This is for
-                educational purposes only. Please see your healthcare provider
-                for medical treatment.
-              </Text>
-            </Box>
+          <AppShell.Footer
+            bg={white}
+            withBorder={false}
+            m="lg"
+            style={{
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Text c="dimmed" m="xs" style={{ fontSize: "10px" }}>
+              © YOUR HEALTH ALLY {new Date().getFullYear()}
+            </Text>
+            <Text c="dimmed" fs="italic" m="xs" style={{ fontSize: "10px" }}>
+              This is not medical advice. This is for educational purposes only.
+              Please see your healthcare provider for medical treatment.
+            </Text>
           </AppShell.Footer>
         </AppShell>
       </div>
