@@ -1,147 +1,178 @@
 import Image from "next/image";
 import {
+  AppShell,
+  Avatar,
+  Burger,
   Button,
   Group,
+  Space,
   Stack,
   Text,
-  AppShell,
-  Burger,
   Textarea,
-  Avatar,
-  Space,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { UserButton, SignedIn } from "@clerk/nextjs";
-import { IconPlus } from "@tabler/icons-react";
-
+import { IconPlus, IconSend } from "@tabler/icons-react";
 import { theme } from "../../components/config/theme";
 import PinkLogo from "../../public/logo/logo-pink-dark.png";
 
 export function Chat() {
-  const [opened, { toggle }] = useDisclosure();
+  const [mobileOpened, { open, close }] = useDisclosure();
+  const isMobile = useMediaQuery("(max-width: 750em)");
 
   // Deconstruct theme object
-  const { colors, white } = theme;
+  const { colors, white, black } = theme;
 
-  //Icon
-  const iconPlus = <IconPlus size={20} />;
+  //Icons
+  const iconPlus = <IconPlus size={15} />;
 
   return (
-    <div style={{ overflowX: "hidden" }}>
-      <div style={{ maxWidth: "100vw", position: "relative" }}>
+    <div style={{ overflowX: "hidden", color: white }}>
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+          position: "relative",
+          color: white,
+        }}
+      >
         <AppShell
           header={{ height: 60 }}
           navbar={{
             width: 300,
             breakpoint: "sm",
-            collapsed: { mobile: !opened },
+            collapsed: { mobile: !mobileOpened },
           }}
-          padding="md"
+          transitionTimingFunction="ease"
+          padding="xs"
           layout="alt"
         >
           <AppShell.Header bg={white} withBorder={false}>
-            <Burger
-              opened={opened}
-              onClick={toggle}
-              hiddenFrom="sm"
-              size="sm"
-            />
             <Group
               m="sm"
-              style={{ alignContent: "center", justifyContent: "flex-end" }}
+              justify={isMobile ? "space-between" : "flex-start"}
+              style={{ alignContent: "center" }}
             >
-              <Space w="sm" />
-              <SignedIn>
-                <UserButton />
-              </SignedIn>
-              <Space w="sm" />
+              <Burger
+                aria-label="Toggle navigation"
+                opened={mobileOpened}
+                onClick={open}
+                hiddenFrom="sm"
+                size="sm"
+                m="sm"
+              />
               <Image
                 src={PinkLogo}
                 alt="Your Health Ally Logo"
-                // 1920 by 1080
+                //Original Size 1920 by 1080...Reduced to 96 by 54 (5% of original size)
                 width={96}
                 height={54}
               />
-              <Space w="sm" />
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
             </Group>
           </AppShell.Header>
 
-          <AppShell.Navbar p="md" bg={white} withBorder={false}>
+          <AppShell.Navbar
+            p="md"
+            bg={colors?.darkPink?.[6]}
+            style={{
+              borderColor: colors?.darkPink?.[9],
+            }}
+          >
+            {mobileOpened ? (
+              <Button
+                mt="xl"
+                variant="white"
+                color={colors?.darkPink?.[6]}
+                onClick={close}
+              >
+                Close
+              </Button>
+            ) : null}
             <Button
               mt="xl"
+              variant="white"
               color={colors?.darkPink?.[6]}
               leftSection={iconPlus}
               justify="center"
             >
-              New Chat
+              Start New Chat
             </Button>
           </AppShell.Navbar>
 
           <AppShell.Main
             bg={white}
+            pb={70}
             style={{
               overflowX: "hidden",
-              paddingBottom: "70px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
             }}
           >
+            {/* CHAT RESPONSE */}
             <Stack className="chatLog" gap="md" style={{ padding: "20px" }}>
               <Group
                 className="chatUser"
-                // bg={colors?.teal?.[2]}
                 style={{
                   padding: "10px",
+                  borderRadius: "10px",
                 }}
               >
-                <Avatar>AH</Avatar>
-                <Text>Ask your questions here.</Text>
+                <Avatar color={colors?.teal?.[6]}>AH</Avatar>
+                <Text c="dimmed">User question</Text>
               </Group>
               <Group
                 className="chatGPT"
-                // bg={colors?.teal?.[5]}
                 style={{
                   padding: "10px",
+                  borderRadius: "10px",
                 }}
               >
-                <Avatar>GPT</Avatar>
-                <Text>I am an AI</Text>
+                <Avatar color={colors?.darkPink?.[6]}>GPT</Avatar>
+                <Text c={black}>AI Response</Text>
               </Group>
             </Stack>
 
-            <Group
-              style={{
-                display: "flex",
-                alignItems: "center",
-                padding: "20px",
-              }}
-            >
+            {/* TEXT AREA - TYPE MESSAGE */}
+            <Group justify="center">
               <Textarea
                 placeholder="What questions do you have?"
-                style={
-                  {
-                    // flex: 1,
-                    // marginRight: "20px",
-                    // borderRadius: "20px",
-                    // boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
-                  }
-                }
-              />
-              <Button
-                // variant="filled"
-                color={colors?.teal?.[6]}
-                size="lg"
+                aria-label="Type your message here"
                 radius="md"
                 style={{
-                  padding: "10px 20px",
-                  height: "fit-content",
+                  width: "90%",
+                }}
+              />
+              <Button
+                color={colors?.darkPink?.[3]}
+                size="sm"
+                radius="xl"
+                justify="center"
+                p={0}
+                aria-label="Send message"
+                style={{
+                  width: "5%",
+                  // "&:hover": {
+                  //   backgroundColor: colors?.darkPink?.[8],
+                  //   color: colors?.darkPink?.[6],
+                  // },
+                  // "$:active": {
+                  //   backgroundColor: colors?.darkPink?.[8],
+                  //   color: colors?.darkPink?.[6],
+                  // },
                 }}
               >
-                Send
+                <IconSend
+                  size={20}
+                  style={{ bottom: "5px", alignSelf: "center" }}
+                />
               </Button>
             </Group>
           </AppShell.Main>
+
           <AppShell.Footer
             bg={white}
             withBorder={false}
