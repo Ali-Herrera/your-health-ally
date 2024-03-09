@@ -1,26 +1,30 @@
 import Image from "next/image";
 import {
   Button,
-  Box,
   Group,
   Stack,
   Text,
-  Title,
   AppShell,
   Burger,
   Textarea,
   Avatar,
+  Space,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { UserButton, SignedIn } from "@clerk/nextjs";
+import { IconPlus } from "@tabler/icons-react";
+
 import { theme } from "../../components/config/theme";
-import LogoHeart from "../../public/icons/heart-pink-dark.png";
+import PinkLogo from "../../public/logo/logo-pink-dark.png";
 
 export function Chat() {
   const [opened, { toggle }] = useDisclosure();
 
   // Deconstruct theme object
-  const { colors, white, black } = theme;
+  const { colors, white } = theme;
+
+  //Icon
+  const iconPlus = <IconPlus size={20} />;
 
   return (
     <div style={{ overflowX: "hidden" }}>
@@ -42,23 +46,34 @@ export function Chat() {
               hiddenFrom="sm"
               size="sm"
             />
-            <Group style={{ alignContent: "center", justifyContent: "center" }}>
-              <Image
-                src={LogoHeart}
-                alt="Your Health Ally Logo"
-                width={40}
-                height={40}
-              />
+            <Group
+              m="sm"
+              style={{ alignContent: "center", justifyContent: "flex-end" }}
+            >
+              <Space w="sm" />
               <SignedIn>
                 <UserButton />
               </SignedIn>
+              <Space w="sm" />
+              <Image
+                src={PinkLogo}
+                alt="Your Health Ally Logo"
+                // 1920 by 1080
+                width={96}
+                height={54}
+              />
+              <Space w="sm" />
             </Group>
           </AppShell.Header>
 
-          <AppShell.Navbar p="md" bg={colors?.darkPink?.[6]} withBorder={false}>
-            <Title c={white}>Your Health Ally</Title>
-            <Button variant="white" color={colors?.darkPink?.[6]}>
-              + New Chat
+          <AppShell.Navbar p="md" bg={white} withBorder={false}>
+            <Button
+              mt="xl"
+              color={colors?.darkPink?.[6]}
+              leftSection={iconPlus}
+              justify="center"
+            >
+              New Chat
             </Button>
           </AppShell.Navbar>
 

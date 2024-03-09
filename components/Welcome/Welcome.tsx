@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Overlay,
+  Space,
   Title,
   Text,
 } from "@mantine/core";
@@ -29,7 +30,6 @@ export function Welcome() {
     >
       <BackgroundImage
         src="https://images.unsplash.com/photo-1593526613712-7b4b9a707330?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        // radius='sm'
         style={{ height: "100%", width: "100%" }}
       >
         <Overlay color={white} opacity={1} zIndex={0} />
@@ -53,7 +53,7 @@ export function Welcome() {
           >
             YOUR HEALTH ALLY
           </Title>
-          <br />
+          <Space h="md" />
           <Title order={2} size="h3" c={black} mb="lg">
             Your Voice Matters. Your Health Matters.
           </Title>
@@ -63,12 +63,12 @@ export function Welcome() {
             your health. Your concerns are valid, and your voice should be
             heard.
           </Text>
-          <br />
+          <Space h="md" />
           <Text c={black} size="xl" fw={500}>
             We provide the resources and support you need to navigate your
             health with confidence.
           </Text>
-          <br />
+          <Space h="md" />
           <Box>
             <Link href="/sign-in">
               <Button
