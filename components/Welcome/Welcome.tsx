@@ -1,48 +1,82 @@
-'use client';
-
-import { Button, Group, Stack, Title, Text } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
-import { theme } from '../config/theme';
-import Link from 'next/link';
+import Link from "next/link";
+import Image from "next/image";
+import {
+	BackgroundImage,
+	Box,
+	Button,
+	Overlay,
+	Space,
+	Title,
+	Text,
+} from "@mantine/core";
+import { theme } from "../config/theme";
+import GreenLogo from "../../public/logo/logo-green.png";
+// import WelcomeImg from '../../public/images/unsplashphoto-welcome.jpg';
+// image org size = 6000x4000
 
 export function Welcome() {
-  const mobileScreen = useMediaQuery('(max-width: 482px)');
+	// const mobileScreen = useMediaQuery('(max-width: 482px)');
 
-  return (
-    <Stack align='center' justify='center' gap={mobileScreen ? 'md' : 'lg'}>
-      <Title ta='center' fw={700} c={theme.black} order={1}>
-        Welcome to{' '}
-        <Text
-          inherit
-          variant='gradient'
-          component='span'
-          gradient={{
-            from: `${theme.colors.darkPink[6]}`,
-            to: `${theme.colors.pink[6]}`,
-          }}
-        >
-          Your Health Ally
-        </Text>
-      </Title>
-      <Title ta='center' mx='auto' order={2} c={theme.colors.pink[6]}>
-        Your Voice Matters. Your Health Matters.
-      </Title>
-      <Text c='black' ta='center' size='lg' maw={580}>
-        At Your Health Ally, we are here to empower you to take control of your
-        health. Your concerns are <b>valid</b>, and your voice should be{' '}
-        <b>heard</b>.
-      </Text>
-      <Text c='black' ta='center' size='lg' maw={580}>
-        We provide the resources and support you need to navigate your health
-        with confidence.
-      </Text>
-      <Group w={'33%'} justify='center'>
-        <Link href='/sign-in'>
-          <Button fullWidth variant='filled' color='#025043'>
-            Get Started
-          </Button>
-        </Link>
-      </Group>
-    </Stack>
-  );
+	// Deconstruct theme object
+	const { colors, white, black } = theme;
+
+	return (
+		<Box
+			p="xl"
+			lh={1.5}
+			style={{
+				height: "100vh",
+				display: "flex",
+				alignContent: "center",
+				flexDirection: "column",
+				backgroundColor: white,
+			}}
+		>
+			<Image
+				src={GreenLogo}
+				alt="Your Health Ally Logo"
+				//Original Size 1920 by 1080...Reduced 20% of original size)
+				width={384}
+				height={212.6}
+			/>
+
+			<Space h="md" />
+			<Title order={2} size="h3" c={black} mb="lg">
+				Your Voice Matters. Your Health Matters.
+			</Title>
+			<br />
+			<Text c={black} size="xl" fw={500}>
+				At Your Health Ally, we are here to empower you to take control of your
+				health. Your concerns are valid, and your voice should be heard.
+			</Text>
+			<Space h="md" />
+			<Text c={black} size="xl" fw={500}>
+				We provide the resources and support you need to navigate your health
+				with confidence.
+			</Text>
+			<Space h="md" />
+			<Box>
+				<Link href="/sign-in">
+					<Button
+						mt="lg"
+						variant="filled"
+						color={colors?.teal?.[6]}
+						size="lg"
+						radius="lg"
+					>
+						Get Started
+					</Button>
+				</Link>
+			</Box>
+			<Box pos="fixed" style={{ bottom: "20px" }}>
+				<Text c={black} m="xs" style={{ fontSize: "10px" }}>
+					© YOUR HEALTH ALLY {new Date().getFullYear()}
+				</Text>
+				<Text c={black} fs="italic" m="xs" style={{ fontSize: "10px" }}>
+					This is not medical advice. This is for educational purposes only.
+					Please see your healthcare provider for medical treatment.
+				</Text>
+			</Box>
+		</Box>
+	);
 }
