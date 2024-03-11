@@ -14,6 +14,7 @@ import { UserButton, SignedIn } from "@clerk/nextjs";
 import { IconPlus, IconSend } from "@tabler/icons-react";
 import { theme } from "../../components/config/theme";
 import PinkLogo from "../../public/logo/logo-pink-dark.png";
+import 
 
 export function Chat() {
   const [mobileOpened, { open, close }] = useDisclosure();
@@ -24,6 +25,9 @@ export function Chat() {
 
   //Icons
   const iconPlus = <IconPlus size={15} />;
+
+  // API Chat
+  
 
   return (
     <div style={{ overflowX: "hidden", color: white }}>
