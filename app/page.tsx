@@ -9,7 +9,7 @@ import {
 } from '@clerk/nextjs';
 import { Group } from '@mantine/core';
 import { Welcome } from '../components/Welcome/Welcome';
-import { Chat } from './Chat';
+import { Chat } from './chat';
 // import { Metadata } from 'next';
 
 export default function HomePage() {
