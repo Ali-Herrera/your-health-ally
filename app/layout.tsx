@@ -1,5 +1,4 @@
 import { ClerkProvider } from '@clerk/nextjs';
-import { withTRPC } from '@trpc/next';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import React from 'react';
 import { theme } from '../theme';
@@ -31,7 +30,7 @@ function RootLayout({
         </head>
         <body>
           <MantineProvider theme={theme}>
-            <Component {...pageProps} />
+            {/* //see here!! <Component {...pageProps} /> */}
           </MantineProvider>
         </body>
       </html>
@@ -39,4 +38,4 @@ function RootLayout({
   );
 }
 
-export default api.withTRPC(RootLayout);
+export default RootLayout;
