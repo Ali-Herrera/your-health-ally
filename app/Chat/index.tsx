@@ -16,33 +16,30 @@ import { theme } from '../../components/config/theme';
 import PinkLogo from '../../public/logo/logo-pink-dark.png';
 import { api } from '@/utils/api';
 import { useState } from 'react';
-import { ChatContent, type ChatItem } from "@/components/ChatContent";
+import { ChatContent, type ChatItem } from '@/components/ChatContent';
 
+// const chatItems: ChatItem[] = [
+//   {
+//     author: "User",
+//     content: "Hello",
+//   },
+//   {
+//     author: "AI",
+//     content: "Hi",
+//   },
+//   {
+//     author: "User",
+//     content: "Hello",
+//   },
+//   {
+//     author: "AI",
+//     content: "Hi",
+//   },
+// ]
 
-const chatItems: ChatItem[] = [
-  {
-    author: "User",
-    content: "Hello",
-  },
-  {
-    author: "AI",
-    content: "Hi",
-  },
-  {
-    author: "User",
-    content: "Hello",
-  },
-  {
-    author: "AI",
-    content: "Hi",
-  },
-]
+export const Chat = () => {
+  const [chatItems, setChatItems] = useState<ChatItem[]>([]);
 
-export const Chat = ({ chatItems }: Props) => {
-  
-
-  const [chatItems, setChatItems] = useState(<ChatItemContent[]>([]));
-  
   const generatedTextMutation = api.ai.generateText.useMutation();
 
   const [mobileOpened, { open, close }] = useDisclosure();
@@ -204,4 +201,4 @@ export const Chat = ({ chatItems }: Props) => {
       </div>
     </div>
   );
-}
+};
