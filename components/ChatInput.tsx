@@ -8,7 +8,7 @@ import { theme } from "./config/theme";
 export const ChatInput = () => {
 
     const { colors, white, black } = theme;
-    
+
 	<Group justify="center">
 		<Textarea
 			placeholder="What questions do you have?"
