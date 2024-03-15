@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 import {
   AppShell,
   Avatar,
@@ -8,17 +8,54 @@ import {
   Stack,
   Text,
   Textarea,
-} from "@mantine/core";
-import { useDisclosure, useMediaQuery } from "@mantine/hooks";
-import { UserButton, SignedIn } from "@clerk/nextjs";
-import { IconPlus, IconSend } from "@tabler/icons-react";
-import { theme } from "../../components/config/theme";
-import PinkLogo from "../../public/logo/logo-pink-dark.png";
-import 
+} from '@mantine/core';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
+import { UserButton, SignedIn } from '@clerk/nextjs';
+import { IconPlus, IconSend } from '@tabler/icons-react';
+import { theme } from '../../components/config/theme';
+import PinkLogo from '../../public/logo/logo-pink-dark.png';
+import { api } from '@/utils/api';
+import { useState } from 'react';
+
+type Author = "User" | "AI";
+
+type ChatItem = {
+  author: Author;
+  content: string;
+  isError?: boolean;
+};
+
+type Props = {
+  chatItems: ChatItem[];
+};
+
+const chatItems: ChatItem[] = [
+  {
+    author: "User",
+    content: "Hello",
+  },
+  {
+    author: "AI",
+    content: "Hi",
+  },
+  {
+    author: "User",
+    content: "Hello",
+  },
+  {
+    author: "AI",
+    content: "Hi",
+  },
+]
 
 export function Chat() {
+  
+  const [chatItems, setChatItems] = useState(<ChatItem[]>([]));
+  
+  const generatedTextMutation = api.ai.generateText.useMutation();
+
   const [mobileOpened, { open, close }] = useDisclosure();
-  const isMobile = useMediaQuery("(max-width: 750em)");
+  const isMobile = useMediaQuery('(max-width: 750em)');
 
   // Deconstruct theme object
   const { colors, white, black } = theme;
@@ -27,15 +64,14 @@ export function Chat() {
   const iconPlus = <IconPlus size={15} />;
 
   // API Chat
-  
 
   return (
-    <div style={{ overflowX: "hidden", color: white }}>
+    <div style={{ overflowX: 'hidden', color: white }}>
       <div
         style={{
-          width: "100vw",
-          height: "100vh",
-          position: "relative",
+          width: '100vw',
+          height: '100vh',
+          position: 'relative',
           color: white,
         }}
       >
@@ -43,30 +79,30 @@ export function Chat() {
           header={{ height: 60 }}
           navbar={{
             width: 300,
-            breakpoint: "sm",
+            breakpoint: 'sm',
             collapsed: { mobile: !mobileOpened },
           }}
-          transitionTimingFunction="ease"
-          padding="xs"
-          layout="alt"
+          transitionTimingFunction='ease'
+          padding='xs'
+          layout='alt'
         >
           <AppShell.Header bg={white} withBorder={false}>
             <Group
-              m="sm"
-              justify={isMobile ? "space-between" : "flex-start"}
-              style={{ alignContent: "center" }}
+              m='sm'
+              justify={isMobile ? 'space-between' : 'flex-start'}
+              style={{ alignContent: 'center' }}
             >
               <Burger
-                aria-label="Toggle navigation"
+                aria-label='Toggle navigation'
                 opened={mobileOpened}
                 onClick={open}
-                hiddenFrom="sm"
-                size="sm"
-                m="sm"
+                hiddenFrom='sm'
+                size='sm'
+                m='sm'
               />
               <Image
                 src={PinkLogo}
-                alt="Your Health Ally Logo"
+                alt='Your Health Ally Logo'
                 //Original Size 1920 by 1080...Reduced to 96 by 54 (5% of original size)
                 width={96}
                 height={54}
@@ -78,7 +114,7 @@ export function Chat() {
           </AppShell.Header>
 
           <AppShell.Navbar
-            p="md"
+            p='md'
             bg={colors?.darkPink?.[6]}
             style={{
               borderColor: colors?.darkPink?.[9],
@@ -86,8 +122,8 @@ export function Chat() {
           >
             {mobileOpened ? (
               <Button
-                mt="xl"
-                variant="white"
+                mt='xl'
+                variant='white'
                 color={colors?.darkPink?.[6]}
                 onClick={close}
               >
@@ -95,11 +131,11 @@ export function Chat() {
               </Button>
             ) : null}
             <Button
-              mt="xl"
-              variant="white"
+              mt='xl'
+              variant='white'
               color={colors?.darkPink?.[6]}
               leftSection={iconPlus}
-              justify="center"
+              justify='center'
             >
               Start New Chat
             </Button>
@@ -109,29 +145,29 @@ export function Chat() {
             bg={white}
             pb={70}
             style={{
-              overflowX: "hidden",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
+              overflowX: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
             }}
           >
             {/* CHAT RESPONSE */}
-            <Stack className="chatLog" gap="md" style={{ padding: "20px" }}>
+            <Stack className='chatLog' gap='md' style={{ padding: '20px' }}>
               <Group
-                className="chatUser"
+                className='chatUser'
                 style={{
-                  padding: "10px",
-                  borderRadius: "10px",
+                  padding: '10px',
+                  borderRadius: '10px',
                 }}
               >
                 <Avatar color={colors?.teal?.[6]}>AH</Avatar>
-                <Text c="dimmed">User question</Text>
+                <Text c='dimmed'>User question</Text>
               </Group>
               <Group
-                className="chatGPT"
+                className='chatGPT'
                 style={{
-                  padding: "10px",
-                  borderRadius: "10px",
+                  padding: '10px',
+                  borderRadius: '10px',
                 }}
               >
                 <Avatar color={colors?.darkPink?.[6]}>GPT</Avatar>
@@ -140,24 +176,24 @@ export function Chat() {
             </Stack>
 
             {/* TEXT AREA - TYPE MESSAGE */}
-            <Group justify="center">
+            <Group justify='center'>
               <Textarea
-                placeholder="What questions do you have?"
-                aria-label="Type your message here"
-                radius="md"
+                placeholder='What questions do you have?'
+                aria-label='Type your message here'
+                radius='md'
                 style={{
-                  width: "90%",
+                  width: '90%',
                 }}
               />
               <Button
                 color={colors?.darkPink?.[3]}
-                size="sm"
-                radius="xl"
-                justify="center"
+                size='sm'
+                radius='xl'
+                justify='center'
                 p={0}
-                aria-label="Send message"
+                aria-label='Send message'
                 style={{
-                  width: "5%",
+                  width: '5%',
                   // "&:hover": {
                   //   backgroundColor: colors?.darkPink?.[8],
                   //   color: colors?.darkPink?.[6],
@@ -170,7 +206,7 @@ export function Chat() {
               >
                 <IconSend
                   size={20}
-                  style={{ bottom: "5px", alignSelf: "center" }}
+                  style={{ bottom: '5px', alignSelf: 'center' }}
                 />
               </Button>
             </Group>
@@ -179,17 +215,17 @@ export function Chat() {
           <AppShell.Footer
             bg={white}
             withBorder={false}
-            m="lg"
+            m='lg'
             style={{
-              display: "flex",
-              alignContent: "center",
-              justifyContent: "center",
+              display: 'flex',
+              alignContent: 'center',
+              justifyContent: 'center',
             }}
           >
-            <Text c="dimmed" m="xs" style={{ fontSize: "10px" }}>
+            <Text c='dimmed' m='xs' style={{ fontSize: '10px' }}>
               © YOUR HEALTH ALLY {new Date().getFullYear()}
             </Text>
-            <Text c="dimmed" fs="italic" m="xs" style={{ fontSize: "10px" }}>
+            <Text c='dimmed' fs='italic' m='xs' style={{ fontSize: '10px' }}>
               This is not medical advice. This is for educational purposes only.
               Please see your healthcare provider for medical treatment.
             </Text>
