@@ -1,110 +1,48 @@
 'use client';
 
-import Image from 'next/image';
-import { AppShell, Burger, Button, Group, Text } from '@mantine/core';
-import { useDisclosure, useMediaQuery } from '@mantine/hooks';
-import { UserButton, SignedIn } from '@clerk/nextjs';
-import { IconPlus } from '@tabler/icons-react';
-import { theme } from '../../components/config/theme';
-import PinkLogo from '../../public/logo/logo-pink-dark.png';
-import { api } from '@/utils/api';
-import { useRef, useState } from 'react';
-import { ChatContent, type ChatItem } from '@/components/ChatContent';
-import { ChatInput } from '@/components/ChatInput';
-import { useMutation } from '@tanstack/react-query';
-// import { useMutation } from '@tanstack/react-query';
+import Image from "next/image";
+import { AppShell, Burger, Button, Group, Text } from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { UserButton, SignedIn } from "@clerk/nextjs";
+import { IconPlus } from "@tabler/icons-react";
+import { theme } from "../../components/config/theme";
+import PinkLogo from "../../public/logo/logo-pink-dark.png";
+import { api } from "@/utils/api";
+import { useState } from "react";
+import { useMutation } from "react-query";
+import { ChatContent, type ChatItem } from "@/components/ChatContent";
+import {ChatInput} from "@/components/ChatInput";
 
-
-// const chatItems: ChatItem[] = [
-// 	{
-// 		author: "User",
-// 		content: "Hello",
-// 	},
-// 	{
-// 		author: "AI",
-// 		content: "Hi",
-// 	},
-// 	{
-// 		author: "User",
-// 		content: "Hello",
-// 	},
-// 	{
-// 		author: "AI",
-// 		content: "Hi",
-// 	},
-// ];
+const chatItems: ChatItem[] = [
+	{
+		author: "User",
+		content: "Hello",
+	},
+	{
+		author: "AI",
+		content: "Hi",
+	},
+	{
+		author: "User",
+		content: "Hello",
+	},
+	{
+		author: "AI",
+		content: "Hi",
+	},
+];
 
 export const Chat = () => {
+	const [chatItems, setChatItems] = useState<ChatItem[]>([]);
 
-  const [chatItems, setChatItems] = useState<ChatItem[]>([]);
-
-  // const generatedTextMutation = useMutation(
-  //   async (prompt: string) => {
-  //     return Promise.resolve({ prompt });
-  //   },
-  const [waiting, setWaiting] = useState<boolean>(false);
-  const scrollToRef = useRef<HTMLDivElement>(null);
-
-  const scrollToBottom = () => {
-    setTimeout(
-      () => scrollToRef.current?.scrollIntoView({ behavior: "smooth" }),
-      100
-    );
-  };
-
-  const generatedTextMutation = api.ai.generateText.useMutation({
-    onSuccess: (data) => {
-      setChatItems([
-        ...chatItems,
-        {
-          content: data.generatedText,
-          author: "AI",
-        },
-      ]);
-    },
-
-    onError: (error) => {
-      setChatItems([
-        ...chatItems,
-        {
-          content: error.message ?? "An error occurred",
-          author: "AI",
-          isError: true,
-        },
-      ]);
-    },
-
-    onSettled: () => {
-      setWaiting(false);
-      scrollToBottom();
-    },
-  });
-
-  // const resetMutation = api.ai.reset.useMutation();
-
-  const handleUpdate = (prompt: string) => {
-    setChatItems([
-      ...chatItems,
-      {
-        content: prompt.replace(/\n/g, "\n\n"),
-        author: "User",
-      },
-    ]);
-
-
-    generatedTextMutation.mutate({ prompt });
-  };
+	const generatedTextMutation = api.ai.generateText.useMutation();
 
   const [mobileOpened, { open, close }] = useDisclosure();
   const isMobile = useMediaQuery('(max-width: 750em)');
 
-  // Deconstruct theme object
-  const { colors, white, black } = theme;
-
-  //Icons
-  const iconPlus = <IconPlus size={15} />;
-
-  // API Chat
+	const { colors, white, black } = theme;
+  
+	const iconPlus = <IconPlus size={15} />;
 
   return (
     <div style={{ overflowX: 'hidden', color: white }}>
@@ -195,10 +133,10 @@ export const Chat = () => {
             {/* CHAT CONTENT */}
             <ChatContent chatItems={chatItems} />
 
-            {/* TEXT AREA - TYPE MESSAGE */}
+						{/* TEXT AREA - TYPE MESSAGE */}
+						<ChatInput />
 
-            <ChatInput onUpdate={handleUpdate} />
-          </AppShell.Main>
+					</AppShell.Main>
 
           <AppShell.Footer
             bg={white}
