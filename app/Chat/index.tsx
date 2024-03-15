@@ -6,13 +6,11 @@ import {
   Burger,
   Button,
   Group,
-  Stack,
   Text,
-  Textarea,
 } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { UserButton, SignedIn } from '@clerk/nextjs';
-import { IconPlus, IconSend } from '@tabler/icons-react';
+import { IconPlus } from '@tabler/icons-react';
 import { theme } from '../../components/config/theme';
 import PinkLogo from '../../public/logo/logo-pink-dark.png';
 import { api } from '@/utils/api';
@@ -144,40 +142,7 @@ export const Chat = () => {
             <ChatContent chatItems={chatItems} />
 
             {/* TEXT AREA - TYPE MESSAGE */}
-            <Group justify='center'>
-              <Textarea
-                placeholder='What questions do you have?'
-                aria-label='Type your message here'
-                radius='md'
-                style={{
-                  width: '90%',
-                }}
-              />
-              <Button
-                color={colors?.darkPink?.[3]}
-                size='sm'
-                radius='xl'
-                justify='center'
-                p={0}
-                aria-label='Send message'
-                style={{
-                  width: '5%',
-                  // "&:hover": {
-                  //   backgroundColor: colors?.darkPink?.[8],
-                  //   color: colors?.darkPink?.[6],
-                  // },
-                  // "$:active": {
-                  //   backgroundColor: colors?.darkPink?.[8],
-                  //   color: colors?.darkPink?.[6],
-                  // },
-                }}
-              >
-                <IconSend
-                  size={20}
-                  style={{ bottom: '5px', alignSelf: 'center' }}
-                />
-              </Button>
-            </Group>
+           
           </AppShell.Main>
 
           <AppShell.Footer
