@@ -16,18 +16,8 @@ import { theme } from '../../components/config/theme';
 import PinkLogo from '../../public/logo/logo-pink-dark.png';
 import { api } from '@/utils/api';
 import { useState } from 'react';
+import { ChatContent, type ChatItem } from "@/components/ChatContent";
 
-type Author = "User" | "AI";
-
-type ChatItem = {
-  author: Author;
-  content: string;
-  isError?: boolean;
-};
-
-type Props = {
-  chatItems: ChatItem[];
-};
 
 const chatItems: ChatItem[] = [
   {
@@ -48,9 +38,10 @@ const chatItems: ChatItem[] = [
   },
 ]
 
-export function Chat() {
+export const Chat = ({ chatItems }: Props) => {
   
-  const [chatItems, setChatItems] = useState(<ChatItem[]>([]));
+
+  const [chatItems, setChatItems] = useState(<ChatItemContent[]>([]));
   
   const generatedTextMutation = api.ai.generateText.useMutation();
 
@@ -151,29 +142,8 @@ export function Chat() {
               justifyContent: 'space-between',
             }}
           >
-            {/* CHAT RESPONSE */}
-            <Stack className='chatLog' gap='md' style={{ padding: '20px' }}>
-              <Group
-                className='chatUser'
-                style={{
-                  padding: '10px',
-                  borderRadius: '10px',
-                }}
-              >
-                <Avatar color={colors?.teal?.[6]}>AH</Avatar>
-                <Text c='dimmed'>User question</Text>
-              </Group>
-              <Group
-                className='chatGPT'
-                style={{
-                  padding: '10px',
-                  borderRadius: '10px',
-                }}
-              >
-                <Avatar color={colors?.darkPink?.[6]}>GPT</Avatar>
-                <Text c={black}>AI Response</Text>
-              </Group>
-            </Stack>
+            <ChatContent chatItems={chatItems} />
+            {/* <ChatContent chatItems={chatItems} /> */}
 
             {/* TEXT AREA - TYPE MESSAGE */}
             <Group justify='center'>
