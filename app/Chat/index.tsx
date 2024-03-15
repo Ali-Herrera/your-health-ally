@@ -39,9 +39,9 @@ const chatItems: ChatItem[] = [
 ];
 
 export const Chat = () => {
-  const [chatItems, setChatItems] = useState<ChatItem[]>([]);
+  // const [chatItems, setChatItems] = useState<ChatItem[]>([]);
 
-  const generatedTextMutation = api.ai.generateText.useMutation();
+  // const generatedTextMutation = api.ai.generateText.useMutation();
 
   const [mobileOpened, { open, close }] = useDisclosure();
   const isMobile = useMediaQuery('(max-width: 750em)');

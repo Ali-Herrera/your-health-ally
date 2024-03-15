@@ -34,9 +34,12 @@ export const ChatContent = ({ chatItems }: Props) =>
         >
           AH
         </Avatar>
-        <Text style={{ color: chatItem.author === 'User' ? 'dimmed' : black }}>
-          {chatItem.content}
-        </Text>
+        {chatItem.author === 'User' ? (
+          <Text c='dimmed'>{chatItem.content}</Text>
+        ) : (
+          <Text c={black}>{chatItem.content}</Text>
+        )}
+        {/*  */}
         {/* TODO: <div
             className={clsx("ml-5 mt-1 box-border", {
               "text-white": !chatItem.isError,
