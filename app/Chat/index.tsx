@@ -1,7 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import {
   AppShell,
-  Avatar,
   Burger,
   Button,
   Group,
@@ -18,24 +19,24 @@ import { api } from '@/utils/api';
 import { useState } from 'react';
 import { ChatContent, type ChatItem } from '@/components/ChatContent';
 
-// const chatItems: ChatItem[] = [
-//   {
-//     author: "User",
-//     content: "Hello",
-//   },
-//   {
-//     author: "AI",
-//     content: "Hi",
-//   },
-//   {
-//     author: "User",
-//     content: "Hello",
-//   },
-//   {
-//     author: "AI",
-//     content: "Hi",
-//   },
-// ]
+const chatItems: ChatItem[] = [
+  {
+    author: 'User',
+    content: 'Hello',
+  },
+  {
+    author: 'AI',
+    content: 'Hi',
+  },
+  {
+    author: 'User',
+    content: 'Hello',
+  },
+  {
+    author: 'AI',
+    content: 'Hi',
+  },
+];
 
 export const Chat = () => {
   const [chatItems, setChatItems] = useState<ChatItem[]>([]);
@@ -139,8 +140,8 @@ export const Chat = () => {
               justifyContent: 'space-between',
             }}
           >
+            {/* CHAT CONTENT */}
             <ChatContent chatItems={chatItems} />
-            {/* <ChatContent chatItems={chatItems} /> */}
 
             {/* TEXT AREA - TYPE MESSAGE */}
             <Group justify='center'>
