@@ -16,7 +16,7 @@ import { IconPlus, IconSend } from '@tabler/icons-react';
 import { theme } from '../../components/config/theme';
 import PinkLogo from '../../public/logo/logo-pink-dark.png';
 import { api } from '@/utils/api';
-// import { useState } from 'react';
+import { useState } from 'react';
 import { ChatContent, type ChatItem } from '@/components/ChatContent';
 
 const chatItems: ChatItem[] = [
@@ -39,9 +39,9 @@ const chatItems: ChatItem[] = [
 ];
 
 export const Chat = () => {
-  // const [chatItems, setChatItems] = useState<ChatItem[]>([]);
+  const [chatItems, setChatItems] = useState<ChatItem[]>([]);
 
-  // const generatedTextMutation = api.ai.generateText.useMutation();
+  const generatedTextMutation = api.ai.generateText.useMutation();
 
   const [mobileOpened, { open, close }] = useDisclosure();
   const isMobile = useMediaQuery('(max-width: 750em)');

@@ -1,8 +1,10 @@
 import { ClerkProvider } from '@clerk/nextjs';
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+
+import '@mantine/core/styles.css';
 import React from 'react';
+import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
-import { api } from '../utils/api';
+import { api } from '@/utils/api';
 
 export const metadata = {
   title: 'Your Health Ally',
@@ -10,12 +12,10 @@ export const metadata = {
     'Your Health Ally is here to empower you to take control of your health. Your concerns are valid, and your voice should be heard. We provide the resources and support you need to navigate your health with confidence.',
 };
 
-function RootLayout({
-  Component,
-  pageProps,
+export default function RootLayout({
+  children,
 }: {
-  Component: any;
-  pageProps: any;
+  children: React.ReactNode;
 }) {
   return (
     <ClerkProvider>
@@ -29,13 +29,9 @@ function RootLayout({
           />
         </head>
         <body>
-          <MantineProvider theme={theme}>
-            {/* //see here!! <Component {...pageProps} /> */}
-          </MantineProvider>
+          <MantineProvider theme={theme}>{children}</MantineProvider>
         </body>
       </html>
     </ClerkProvider>
   );
 }
-
-export default RootLayout;

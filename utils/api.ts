@@ -11,7 +11,7 @@ import type { inferRouterInputs, inferRouterOutputs } from '@trpc/server';
 import type { NextPageContext } from 'next';
 
 import { transformer } from './transformer';
-import { AppRouter } from '@/app/api/chat/root';
+import { AppRouter } from '@/app/server/api/root';
 
 function getBaseUrl() {
   if (typeof window !== 'undefined') {
