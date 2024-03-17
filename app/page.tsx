@@ -1,22 +1,18 @@
 'use client';
 
-import {
-  UserButton,
-  useUser,
-  SignedIn,
-  SignedOut,
-  SignInButton,
-} from '@clerk/nextjs';
+import { UserButton, useUser } from '@clerk/nextjs';
 import { Group } from '@mantine/core';
 import { Welcome } from '../components/Welcome/Welcome';
 import { Chat } from './chat';
-// import { Metadata } from 'next';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 export default function HomePage() {
   const { isLoaded, user } = useUser();
 
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       {/* If the user is not signed in, show the welcome page */}
       {isLoaded && !user && (
         <>
@@ -35,6 +31,7 @@ export default function HomePage() {
           </Group>
         </>
       )}
-    </>
+    </QueryClientProvider>
   );
 }
+
