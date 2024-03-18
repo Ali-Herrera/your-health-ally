@@ -44,8 +44,8 @@ export const ChatContent = ({ chatItems }: Props) =>
 				) : (
 					<Text c={black}>{chatItem.content}</Text>
 				)}
-				{/*  */}
-				{/* TODO: <div
+				{/* TODO: ERROR HANDLING
+				 <div
             className={clsx("ml-5 mt-1 box-border", {
               "text-white": !chatItem.isError,
               "text-red-500": chatItem.isError,

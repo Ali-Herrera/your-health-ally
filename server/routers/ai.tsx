@@ -8,7 +8,7 @@ export const aiRouter = createTRPCRouter({
 			const { prompt } = input;
 
 			return {
-				generatedText: `You said: '${prompt}'`,
+				generatedText: `Received: '${prompt}'`,
 			};
 		}),
 });

@@ -1,6 +1,5 @@
 import { Button, Group, Textarea } from "@mantine/core";
 import { IconSend } from "@tabler/icons-react";
-
 import { theme } from "./config/theme";
 import { useState } from "react";
 
@@ -10,15 +9,13 @@ type Props = {
 
 export const ChatInput = ({ onUpdate }: Props) => {
 	const [prompt, setPrompt] = useState<string>("");
-	{
-		/* TODO: Uncaught TypeError: onUpdate is not a function */
-	}
+
 	const handleUpdate = () => {
 		setPrompt("");
 		onUpdate(prompt);
 	};
 
-	const { colors, white, black } = theme;
+	const { colors } = theme;
 	return (
 		<Group justify="center">
 			<Textarea

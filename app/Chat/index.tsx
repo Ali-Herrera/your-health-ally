@@ -12,29 +12,17 @@ import { ChatContent, type ChatItem } from "@/components/ChatContent";
 import { ChatInput } from "@/components/ChatInput";
 import PinkLogo from "../../public/logo/logo-pink-dark.png";
 
-const chatItems: ChatItem[] = [
-	{
-		author: "User",
-		content: "Hello",
-	},
-	{
-		author: "AI",
-		content: "Hi",
-	},
-	{
-		author: "User",
-		content: "I am a user",
-	},
-	{
-		author: "AI",
-		content: "I am AI",
-	},
-];
-
 export const Chat = () => {
 	const [chatItems, setChatItems] = useState<ChatItem[]>([]);
 
-	const generatedTextMutation = api.ai.generateText.useMutation();
+	const generatedTextMutation = api.ai.generateText.useMutation({
+		onSuccess: (data) => {
+			setChatItems([
+				...chatItems,
+				{ content: data.generatedText, author: "AI" },
+			]);
+		},
+	});
 
 	const [mobileOpened, { open, close }] = useDisclosure();
 	const isMobile = useMediaQuery("(max-width: 750em)");
@@ -134,7 +122,7 @@ export const Chat = () => {
 
 						{/* TEXT AREA - TYPE MESSAGE */}
 						{/* TODO: Uncaught TypeError: onUpdate is not a function */}
-						<ChatInput />
+						<ChatInput onUpdate={handleUpdate} />
 					</AppShell.Main>
 
 					<AppShell.Footer
