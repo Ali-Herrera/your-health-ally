@@ -13,6 +13,10 @@ import { ChatInput } from "@/components/ChatInput";
 import PinkLogo from "../../public/logo/logo-pink-dark.png";
 
 export const Chat = () => {
+	const [mobileOpened, { open, close }] = useDisclosure();
+	const isMobile = useMediaQuery("(max-width: 750em)");
+	const { colors, white } = theme;
+	const iconPlus = <IconPlus size={15} />;
 	const [chatItems, setChatItems] = useState<ChatItem[]>([]);
 
 	const generatedTextMutation = api.ai.generateText.useMutation({
@@ -24,12 +28,10 @@ export const Chat = () => {
 		},
 	});
 
-	const [mobileOpened, { open, close }] = useDisclosure();
-	const isMobile = useMediaQuery("(max-width: 750em)");
-
-	const { colors, white, black } = theme;
-
-	const iconPlus = <IconPlus size={15} />;
+	const handleUpdate = (prompt: string) => {
+		setChatItems([...chatItems, { content: prompt, author: "User" }]);
+		generatedTextMutation.mutate({ prompt });
+	};
 
 	return (
 		<div style={{ overflowX: "hidden", color: white }}>
@@ -105,6 +107,11 @@ export const Chat = () => {
 						>
 							Start New Chat
 						</Button>
+						{mobileOpened ? (
+							<SignedIn>
+								<UserButton />
+							</SignedIn>
+						) : null}
 					</AppShell.Navbar>
 
 					<AppShell.Main
