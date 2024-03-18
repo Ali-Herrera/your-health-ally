@@ -6,12 +6,11 @@ import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { UserButton, SignedIn } from "@clerk/nextjs";
 import { IconPlus } from "@tabler/icons-react";
 import { theme } from "../../components/config/theme";
-import PinkLogo from "../../public/logo/logo-pink-dark.png";
 import { api } from "@/utils/api";
 import { useState } from "react";
-import { useMutation } from "react-query";
 import { ChatContent, type ChatItem } from "@/components/ChatContent";
-import {ChatInput} from "@/components/ChatInput";
+import { ChatInput } from "@/components/ChatInput";
+import PinkLogo from "../../public/logo/logo-pink-dark.png";
 
 const chatItems: ChatItem[] = [
 	{
@@ -24,11 +23,11 @@ const chatItems: ChatItem[] = [
 	},
 	{
 		author: "User",
-		content: "Hello",
+		content: "I am a user",
 	},
 	{
 		author: "AI",
-		content: "Hi",
+		content: "I am AI",
 	},
 ];
 
@@ -41,7 +40,7 @@ export const Chat = () => {
 	const isMobile = useMediaQuery("(max-width: 750em)");
 
 	const { colors, white, black } = theme;
-  
+
 	const iconPlus = <IconPlus size={15} />;
 
 	return (
@@ -134,8 +133,8 @@ export const Chat = () => {
 						<ChatContent chatItems={chatItems} />
 
 						{/* TEXT AREA - TYPE MESSAGE */}
+						{/* TODO: Uncaught TypeError: onUpdate is not a function */}
 						<ChatInput />
-
 					</AppShell.Main>
 
 					<AppShell.Footer

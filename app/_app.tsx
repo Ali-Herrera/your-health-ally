@@ -1,58 +1,67 @@
-import { AppProps, AppType } from "next/app";
-import { withTRPC } from "@trpc/next";
-import { api } from "../utils/api"; // import your api and AppRouter from your api.ts file
-import { AppRouter } from "../app/server/api/root"; // replace with your actual tRPC router
-import { QueryClient, QueryClientProvider } from "react-query";
-import RootLayout from "@/app/layout";
-import { NextPage, NextPageContext } from "next";
-import { ReactElement, ReactNode } from "react";
-import { transformer } from "../utils/transformer";
-import { parse } from "url";
-import { parse as parseQuery } from "querystring";
-
-import "~/styles/globals.css";
+import { withTRPC } from '@trpc/next';
+import type { AppType, AppProps } from 'next/app';
+import RootLayout from '@/app/layout';
+import '~/styles/globals.css';
+import { NextPage } from 'next';
+import { ReactElement, ReactNode } from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 export type NextPageWithLayout<
-	TProps = Record<string, unknown>,
-	TInitialProps = TProps,
+  TProps = Record<string, unknown>,
+  TInitialProps = TProps
 > = NextPage<TProps, TInitialProps> & {
-	getLayout?: (page: ReactElement) => ReactNode;
+  getLayout?: (page: ReactElement) => ReactNode;
 };
 
 type AppPropsWithLayout = AppProps & {
-	Component: NextPageWithLayout;
+  Component: NextPageWithLayout;
 };
 
 const queryClient = new QueryClient();
 
-const MyApp = (({ Component, pageProps }: AppPropsWithLayout) => {
-	const getLayout =
-		Component.getLayout ?? ((page) => <RootLayout>{page}</RootLayout>);
+const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const getLayout =
+    Component.getLayout ?? ((page) => <RootLayout>{page}</RootLayout>);
+  return (
+    <QueryClientProvider client={queryClient}>
+      {getLayout(<Component {...pageProps} />)}
+    </QueryClientProvider>
+  );
+};
 
-	return (
-		<QueryClientProvider client={queryClient}>
-			{getLayout(<Component {...pageProps} />)}
-		</QueryClientProvider>
-	);
-}) as AppType;
+function getBaseUrl() {
+	if (typeof window !== "undefined") {
+		return "";
+	}
+	// reference for vercel.com
+	if (process.env.VERCEL_URL) {
+		return `https://${process.env.VERCEL_URL}`;
+	}
 
-export default withTRPC<AppRouter>({
-  // ctx includes `req`, `res`, etc
-  config: ({ctx}) => ({}),
-// const url= process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}/api/trpc`
-// : "http://localhost:3000/api/trpc",
+	// // reference for render.com
+	if (process.env.RENDER_INTERNAL_HOSTNAME) {
+		return `http://${process.env.RENDER_INTERNAL_HOSTNAME}:${process.env.PORT}`;
+	}
 
+	// assume localhost
+	return `http://localhost:${process.env.PORT ?? 3000}`;
+}
 
-//    return {
-//     url: url
-      
-//     ssr: Boolean(ctx.req), // for serverside rendering
-//     pathname: ctx?.pathname,;
-//     query: ParsedUrlQuery;
-//     err: (Error & { statusCode?: number }) | null;}
-//   }),
-  transformer: transformer,
-  // onError: (Error) => {
-  //   console.error(err);
-  // },
+const AppWithTRPC = withTRPC({
+  config: () => ({
+    links: [
+      createHttpLink({
+        url: `${getBaseUrl()}/api/trpc`,
+      }),
+    ],
+  }),
+  ssr: false,
 })(MyApp);
+
+export default AppWithTRPC;
+
+function createHttpLink(arg0: {
+      url: string;
+    }): import('@trpc/client').TRPCLink<import('@trpc/server').AnyRouter> {
+      throw new Error('Function not implemented.');
+    }
