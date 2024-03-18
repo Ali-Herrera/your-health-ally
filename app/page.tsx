@@ -9,7 +9,7 @@ import { Group } from "@mantine/core";
 
 import { Welcome } from "../components/Welcome/Welcome";
 import { Chat } from "./Chat/index";
-import { api } from "../utils/api";
+import { trpc } from "../utils/trpc";
 import { transformer } from "../utils/transformer";
 
 export default function HomePage() {
@@ -17,16 +17,35 @@ export default function HomePage() {
 
 	const [queryClient] = useState(() => new QueryClient());
 
+	function getBaseUrl() {
+		if (typeof window !== "undefined") {
+			return "";
+		}
+		// reference for vercel.com
+		if (process.env.VERCEL_URL) {
+			return `https://${process.env.VERCEL_URL}`;
+		}
+	
+		// // reference for render.com
+		if (process.env.RENDER_INTERNAL_HOSTNAME) {
+			return `http://${process.env.RENDER_INTERNAL_HOSTNAME}:${process.env.PORT}`;
+		}
+	
+		// assume localhost
+		return `http://127.0.0.1:${process.env.PORT ?? 3000}`;
+	}
+
 	const [trpcClient] = useState(() =>
 		trpc.createClient({
 			links: [
 				httpBatchLink({
-					// TODO: replace URL
-					url: "http://localhost:3000/trpc",
+					url: `${getBaseUrl()}/trpc`,
 					// You can pass any HTTP headers you wish here
 					async headers() {
 						return {
-							authorization: user?.id ? `Bearer ${user.id}` : "User is not signed in",
+							authorization: user?.id
+								? `Bearer ${user.id}`
+								: "User is not signed in",
 						};
 					},
 					transformer: transformer,

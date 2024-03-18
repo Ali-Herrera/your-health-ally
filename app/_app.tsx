@@ -5,6 +5,7 @@ import '~/styles/globals.css';
 import { NextPage } from 'next';
 import { ReactElement, ReactNode } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { trpc } from '../utils/trpc';
 
 export type NextPageWithLayout<
   TProps = Record<string, unknown>,
@@ -19,7 +20,7 @@ type AppPropsWithLayout = AppProps & {
 
 const queryClient = new QueryClient();
 
-const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+const MyApp: AppType = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout =
     Component.getLayout ?? ((page) => <RootLayout>{page}</RootLayout>);
   return (
@@ -29,11 +30,29 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   );
 };
 
+function getBaseUrl() {
+  if (typeof window !== "undefined") {
+    return "";
+  }
+  // reference for vercel.com
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+
+  // // reference for render.com
+  if (process.env.RENDER_INTERNAL_HOSTNAME) {
+    return `http://${process.env.RENDER_INTERNAL_HOSTNAME}:${process.env.PORT}`;
+  }
+
+  // assume localhost
+  return `http://127.0.0.1:${process.env.PORT ?? 3000}`;
+}
+
 const AppWithTRPC = withTRPC({
   config: () => ({
     links: [
       createHttpLink({
-        url: 'http://localhost:3000/api/trpc', // replace with your server URL
+        url: `${getBaseUrl()}/api/trpc`,
       }),
     ],
   }),

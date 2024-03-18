@@ -1,11 +1,10 @@
 import { httpBatchLink, loggerLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
-
 import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
 import type { NextPageContext } from "next";
 // ℹ️ Type-only import:
 // https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-export
-import type { AppRouter } from "../app/server/api/root";
+import type { AppRouter } from "../server/api/root";
 import { transformer } from "./transformer";
 
 function getBaseUrl() {
