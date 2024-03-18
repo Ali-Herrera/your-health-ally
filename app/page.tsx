@@ -9,12 +9,14 @@ import { Group } from "@mantine/core";
 
 import { Welcome } from "../components/Welcome/Welcome";
 import { Chat } from "./Chat/index";
-import { trpc } from "../utils/trpc";
+import { api } from "../utils/api";
 import { transformer } from "../utils/transformer";
 
 export default function HomePage() {
 	const { isLoaded, user } = useUser();
+
 	const [queryClient] = useState(() => new QueryClient());
+
 	const [trpcClient] = useState(() =>
 		trpc.createClient({
 			links: [
@@ -24,7 +26,7 @@ export default function HomePage() {
 					// You can pass any HTTP headers you wish here
 					async headers() {
 						return {
-							authorization: getAuthCookie(),
+							authorization: user?.id ? `Bearer ${user.id}` : "User is not signed in",
 						};
 					},
 					transformer: transformer,
