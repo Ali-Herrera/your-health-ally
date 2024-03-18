@@ -80,6 +80,16 @@ export const Chat = () => {
     },
   });
 
+  /*
+   * You can uncomment this stub to replace the actual call
+   * if you get stuck and just need the page to render.
+
+  const generatedTextMutation = {
+    mutate: (opts) => { console.log(opts) }
+  }
+
+   */
+
   // const resetMutation = api.ai.reset.useMutation();
 
   const handleUpdate = (prompt: string) => {

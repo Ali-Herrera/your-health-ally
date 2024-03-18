@@ -12,3 +12,7 @@ export const aiRouter = createTRPCRouter({
       };
     }),
 });
+
+// Exporting just the type data to prevent bundling
+// server-side code into the client.
+export type aiRouterType = typeof aiRouter;
