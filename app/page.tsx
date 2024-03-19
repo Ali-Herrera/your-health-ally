@@ -8,7 +8,7 @@ import { httpBatchLink } from "@trpc/client";
 import { Group } from "@mantine/core";
 
 import { Welcome } from "../components/Welcome/Welcome";
-import { Chat } from "./Chat/index";
+import { Chat } from "./chat/index";
 import { trpc } from "../utils/trpc";
 import { transformer } from "../utils/transformer";
 
